@@ -16259,7 +16259,7 @@ Cypress.Commands.add('analise_com_sucesso_pine_inss_corban', project => {
   })
 
 
-//----------------------------------------------Pine INSS CORBAN----------------------------------------------
+//----------------------------------------------Pine PAB----------------------------------------------
 
 Cypress.Commands.add('analise_com_sucesso_pine_pab', project => {
     cy.request({
