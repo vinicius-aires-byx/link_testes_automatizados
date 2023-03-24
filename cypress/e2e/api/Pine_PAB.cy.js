@@ -19,7 +19,7 @@ describe('Analise com sucesso', () => {
       description11: "CPF em lista",
     }
 
-    cy.analise_com_sucesso_pine_fgts()
+    cy.analise_com_sucesso_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
@@ -65,7 +65,7 @@ describe('Portal da transparência com sucesso', () => {
       description6: "Idade minima"
     }
 
-    cy.portal_transparencia_com_sucesso_pine_fgts()
+    cy.portal_transparencia_com_sucesso_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
@@ -96,7 +96,7 @@ describe('banco permitido REPROVADO', () => {
       description1: "Banco permitido",
     }
 
-    cy.banco_permitido_reprovado_pine_fgts()
+    cy.banco_permitido_reprovado_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
@@ -118,7 +118,7 @@ describe('valor mínimo da parcela REPROVADO', () => {
       description2: "Valor mínimo da parcela"
     }
 
-    cy.valor_minimo_parcela_reprovado_pine_fgts()
+    cy.valor_minimo_parcela_reprovado_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
@@ -143,7 +143,7 @@ describe('numero total de parcelas REPROVADO', () => {
       description3: "Número total de parcelas"
     }
 
-    cy.numero_total_parcelas_reprovado_pine_fgts()
+    cy.numero_total_parcelas_reprovado_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
@@ -171,7 +171,7 @@ describe('Data de emissão do RG REPROVADO', () => {
       description4: "Data de emissão do RG"
     }
 
-    cy.data_emissao_rg_reprovado_pine_fgts()
+    cy.data_emissao_rg_reprovado_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
@@ -202,7 +202,7 @@ describe('idade maxima REPROVADO', () => {
       description5: "Idade máxima"
     }
 
-    cy.idade_maxima_reprovado_pine_fgts()
+    cy.idade_maxima_reprovado_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
@@ -236,7 +236,7 @@ describe('idade minima REPROVADO', () => {
       description6: "Idade minima"
     }
 
-    cy.idade_minima_reprovado_pine_fgts()
+    cy.idade_minima_reprovado_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
@@ -273,7 +273,7 @@ describe('Valor mínimo contrato REPROVADO', () => {
       description7: "Valor mínimo contrato"
     }
 
-    cy.valor_minimo_contrato_reprovado_pine_fgts()
+    cy.valor_minimo_contrato_reprovado_pine_pab()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[0].descricao).to.equal(project.description0)
