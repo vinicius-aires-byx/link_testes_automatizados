@@ -5,10 +5,10 @@ describe('Analise com sucesso', () => {
 
   it('successfully', () => {
     const project = {
-      description0: "Limite Mínimo Idade: 21 Anos;",
+      description0: "Limite Mínimo Idade: 4 Anos;",
       description1: "Limite Máximo Idade: 80 Anos;",
       description2: "Valor Mínimo CCB: R$ 250,00;",
-      description3: "Número Total de Parcelas;",
+      description3: "Número Total de Parcelas: 12;",
       description4: "Janela Primeira Parcelas: 60 dias;",
       description5: "Valor Máximo CCB: R$ 20.000,00;",
       description6: "Valor Mínimo de Parcela: R$ 30,00;",
@@ -18,21 +18,24 @@ describe('Analise com sucesso', () => {
       description10: "Parcelas Subsequentes Mensal;",
       description11: "Inadimplência Parcela/Contrato;",
       description12: "Taxa Mínima: 1,80;",
-      description13: "Taxa Máxima: 2,14;",
-      description14: "Número Máximo de Parcelas: 12;",
-      description15: "CCB emitida a menos de 8 dias;",
-      description16: "Número Mínimo de Parcelas: 10;",
-      description17: "Tempo mínimo de benefício: 12 Meses;",
-      description18: "Dia de vencimento fora do range definido;",
-      description19: "CNPJ Correspondente não cadastrado;",
-      description20: "Contrato duplicado;",
-      description21: "Contrato em lista restritiva;",
-      description22: "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO",
-      description23: "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1",
-      description24: "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO",
-      description25: "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP",
-      description26: "Situação CPF Receita: Diferente de Regular;",
-      description27: "Benefícios elegíveis"
+      description13: "Benefício Elegível",
+      description14: "Taxa Máxima: 2,14;",
+      description15: "Número Máximo de Parcelas: 12;",
+      description16: "Limite Máximo Idade RL: 65 Anos;",
+      description17: "CCB emitida a menos de 8 dias;",
+      description18: "Número Mínimo de Parcelas: 10;",
+      description19: "Tempo mínimo de benefício: 12 Meses;",
+      description20: "Dia de vencimento fora do range definido;",
+      description21: "CNPJ Correspondente não cadastrado;",
+      description22: "Contrato duplicado;",
+      description23: "Contrato em lista restritiva;",
+      description24: "Validação RL - Nome, Nascimento, Obito, PEP; - ",
+      description25: "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO",
+      description26: "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1",
+      description27: "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO",
+      description28: "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP",
+      description29: "Situação CPF Receita Rep.Le: Diferente de Regular;",
+      description30: "Situação CPF Receita: Diferente de Regular;"
     }
 
     cy.analise_com_sucesso_pine_inss()
@@ -99,12 +102,12 @@ describe('Analise com sucesso', () => {
   })
 })
 
-describe('Limite Mínimo Idade: 21 Anos; REPROVADO', () => {
+describe('Limite Mínimo Idade: 4 Anos; REPROVADO', () => {
   //beforeEach(() => cy.api_deleteProjects())
 
   it('successfully', () => {
     const project = {
-      description0: "Limite Mínimo Idade: 21 Anos;"
+      description0: "Limite Mínimo Idade: 4 Anos;"
     }
 
     cy.idade_minima_reprovado_pine_inss()
@@ -319,13 +322,13 @@ describe('Taxa Mínima: 1,80; REPROVADO', () => {
   })
 })
 
-describe('Taxa Máxima: 2,14; REPROVADO', () => {
-  it('successfully', () => {
+describe('Benefício Elegível REPROVADA', () => {
+  it.only('successfully', () => {
     const project = {
-      description13: "Taxa Máxima: 2,14;"
+      description13: "Benefício Elegível"
     }
 
-    cy.taxa_maxima_reprovado_pine_inss()
+    cy.beneficio_elegivel_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[13].descricao).to.equal(project.description13)
@@ -335,13 +338,13 @@ describe('Taxa Máxima: 2,14; REPROVADO', () => {
   })
 })
 
-describe('Número Máximo de Parcelas: 12; REPROVADO', () => {
+describe('Taxa Máxima: 2,14; REPROVADO', () => {
   it('successfully', () => {
     const project = {
-      description14: "Número Máximo de Parcelas: 12;"
+      description14: "Taxa Máxima: 2,14;"
     }
 
-    cy.numero_maximo_parcelas_reprovado_pine_inss()
+    cy.taxa_maxima_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[14].descricao).to.equal(project.description14)
@@ -351,13 +354,13 @@ describe('Número Máximo de Parcelas: 12; REPROVADO', () => {
   })
 })
 
-describe('CCB emitida a menos de 8 dias; REPROVADO', () => {
+describe('Número Máximo de Parcelas: 12; REPROVADO', () => {
   it('successfully', () => {
     const project = {
-      description15: "CCB emitida a menos de 8 dias;"
+      description15: "Número Máximo de Parcelas: 12;"
     }
 
-    cy.ccb_imitida_a_menos_de_8_dias_reprovado_pine_inss()
+    cy.numero_maximo_parcelas_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[15].descricao).to.equal(project.description15)
@@ -367,13 +370,13 @@ describe('CCB emitida a menos de 8 dias; REPROVADO', () => {
   })
 })
 
-describe('Número Mínimo de Parcelas: 10; REPROVADO', () => {
+describe('Limite Máximo Idade RL: 65 Anos; REPROVADA', () => {
   it('successfully', () => {
     const project = {
-      description16: "Número Mínimo de Parcelas: 10;"
+      description16: "Limite Máximo Idade RL: 65 Anos;"
     }
 
-    cy.numero_minimo_parcelas_reprovado_pine_inss()
+    cy.limite_maximo_idade_representante_legal_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[16].descricao).to.equal(project.description16)
@@ -383,13 +386,13 @@ describe('Número Mínimo de Parcelas: 10; REPROVADO', () => {
   })
 })
 
-describe('Tempo mínimo de benefício: 12 Meses; REPROVADO', () => {
+describe('CCB emitida a menos de 8 dias; REPROVADO', () => {
   it('successfully', () => {
     const project = {
-      description17: "Tempo mínimo de benefício: 12 Meses;"
+      description17: "CCB emitida a menos de 8 dias;"
     }
 
-    cy.tempo_minimo_beneficio_reprovado_pine_inss()
+    cy.ccb_imitida_a_menos_de_8_dias_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[17].descricao).to.equal(project.description17)
@@ -399,13 +402,13 @@ describe('Tempo mínimo de benefício: 12 Meses; REPROVADO', () => {
   })
 })
 
-describe('Dia de vencimento fora do range definido; REPROVADO', () => {
+describe('Número Mínimo de Parcelas: 10; REPROVADO', () => {
   it('successfully', () => {
     const project = {
-      description18: "Dia de vencimento fora do range definido;"
+      description18: "Número Mínimo de Parcelas: 10;"
     }
 
-    cy.vencimento_fora_do_range_definido_reprovado_pine_inss()
+    cy.numero_minimo_parcelas_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[18].descricao).to.equal(project.description18)
@@ -415,13 +418,13 @@ describe('Dia de vencimento fora do range definido; REPROVADO', () => {
   })
 })
 
-describe('CNPJ Correspondente não cadastrado; REPROVADO', () => {
-  it.only('successfully', () => {
+describe('Tempo mínimo de benefício: 12 Meses; REPROVADO', () => {
+  it('successfully', () => {
     const project = {
-      description19: "CNPJ Correspondente não cadastrado;"
+      description19: "Tempo mínimo de benefício: 12 Meses;"
     }
 
-    cy.cnpj_nao_cadastrado_reprovado_pine_inss()
+    cy.tempo_minimo_beneficio_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[19].descricao).to.equal(project.description19)
@@ -431,13 +434,13 @@ describe('CNPJ Correspondente não cadastrado; REPROVADO', () => {
   })
 })
 
-describe('Contrato duplicado; REPROVADO', () => {
+describe('Dia de vencimento fora do range definido; REPROVADO', () => {
   it('successfully', () => {
     const project = {
-      description20: "Contrato duplicado;"
+      description20: "Dia de vencimento fora do range definido;"
     }
 
-    cy.contrato_duplicado_reprovado_pine_inss()
+    cy.vencimento_fora_do_range_definido_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[20].descricao).to.equal(project.description20)
@@ -447,13 +450,13 @@ describe('Contrato duplicado; REPROVADO', () => {
   })
 })
 
-describe('Contrato em lista restritiva;', () => {
-  it('successfully', () => {
+describe('CNPJ Correspondente não cadastrado; REPROVADO', () => {
+  it.only('successfully', () => {
     const project = {
-      description21: "Contrato em lista restritiva;"
+      description21: "CNPJ Correspondente não cadastrado;"
     }
 
-    cy.contrato_lista_retritiva_reprovado_pine_inss()
+    cy.cnpj_nao_cadastrado_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         expect(response.body.regras[21].descricao).to.equal(project.description21)
@@ -463,26 +466,90 @@ describe('Contrato em lista restritiva;', () => {
   })
 })
 
+describe('Contrato duplicado; REPROVADO', () => {
+  it('successfully', () => {
+    const project = {
+      description22: "Contrato duplicado;"
+    }
+
+    cy.contrato_duplicado_reprovado_pine_inss()
+      .then(response => {
+        expect(response.status).to.equal(201)
+        expect(response.body.regras[22].descricao).to.equal(project.description22)
+        expect(response.body.regras[22].regra_aprovada).to.equal(false)
+      })
+  
+  })
+})
+
+describe('Contrato em lista restritiva;', () => {
+  it('successfully', () => {
+    const project = {
+      description23: "Contrato em lista restritiva;"
+    }
+
+    cy.contrato_lista_retritiva_reprovado_pine_inss()
+      .then(response => {
+        expect(response.status).to.equal(201)
+        expect(response.body.regras[23].descricao).to.equal(project.description23)
+        expect(response.body.regras[23].regra_aprovada).to.equal(false)
+      })
+  
+  })
+})
+
+describe('Validação RL - Nome, Nascimento, Obito, PEP;', () => {
+  it('successfully', () => {
+    const project = {
+      description24: "Validação RL - Nome, Nascimento, Obito, PEP; - "
+    }
+
+    cy.validacao_bureau_representante_legal_reprovado_pine_inss()
+      .then(response => {
+        expect(response.status).to.equal(201)
+        expect(response.body.regras[24].descricao).to.equal(project.description24)
+        expect(response.body.regras[24].regra_aprovada).to.equal(false)
+      })
+  
+  })
+})
+
 describe('Validação Bureau - Nome, Nascimento, Obito, PEP; REPROVADO', () => {
   it('successfully', () => {
     const project = {
-      description22: "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO",
-      description23: "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1",
-      description24: "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO",
-      description25: "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP"
+      description25: "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO",
+      description26: "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1",
+      description27: "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO",
+      description28: "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP"
     }
 
     cy.validacao_bureau_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
-        expect(response.body.regras[22].descricao).to.equal(project.description22)
-        expect(response.body.regras[22].regra_aprovada).to.equal(false)
-        expect(response.body.regras[23].descricao).to.equal(project.description23)
-        expect(response.body.regras[23].regra_aprovada).to.equal(false)
-        expect(response.body.regras[24].descricao).to.equal(project.description24)
-        expect(response.body.regras[24].regra_aprovada).to.equal(false)
         expect(response.body.regras[25].descricao).to.equal(project.description25)
         expect(response.body.regras[25].regra_aprovada).to.equal(false)
+        expect(response.body.regras[26].descricao).to.equal(project.description26)
+        expect(response.body.regras[26].regra_aprovada).to.equal(false)
+        expect(response.body.regras[27].descricao).to.equal(project.description27)
+        expect(response.body.regras[27].regra_aprovada).to.equal(false)
+        expect(response.body.regras[28].descricao).to.equal(project.description28)
+        expect(response.body.regras[28].regra_aprovada).to.equal(false)
+      })
+  
+  })
+})
+
+describe('Situação CPF Receita Rep.Le: Diferente de Regular; REPROVADO', () => {
+  it.only('successfully', () => {
+    const project = {
+      description29: "Situação CPF Receita Rep.Le: Diferente de Regular;"
+    }
+
+    cy.situacao_cpf_receita_representante_legal_reprovado_pine_inss()
+      .then(response => {
+        expect(response.status).to.equal(201)
+        expect(response.body.regras[29].descricao).to.equal(project.description29)
+        expect(response.body.regras[29].regra_aprovada).to.equal(false)
       })
   
   })
@@ -491,31 +558,16 @@ describe('Validação Bureau - Nome, Nascimento, Obito, PEP; REPROVADO', () => {
 describe('Situação CPF Receita: Diferente de Regular; REPROVADO', () => {
   it.only('successfully', () => {
     const project = {
-      description26: "Situação CPF Receita: Diferente de Regular;",
+      description30: "Situação CPF Receita: Diferente de Regular;"
     }
 
     cy.situacao_cpf_receita_reprovado_pine_inss()
       .then(response => {
         expect(response.status).to.equal(201)
-        expect(response.body.regras[26].descricao).to.equal(project.description26)
-        expect(response.body.regras[26].regra_aprovada).to.equal(false)
+        expect(response.body.regras[30].descricao).to.equal(project.description30)
+        expect(response.body.regras[30].regra_aprovada).to.equal(false)
       })
   
   })
 })
 
-describe('Benefícios elegíveis REPROVADO', () => {
-  it.only('successfully', () => {
-    const project = {
-      description27: "Benefícios elegíveis"
-    }
-
-    cy.beneficio_elegivel_reprovado_pine_inss()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        expect(response.body.regras[27].descricao).to.equal(project.description27)
-        expect(response.body.regras[27].regra_aprovada).to.equal(false)
-      })
-  
-  })
-})
