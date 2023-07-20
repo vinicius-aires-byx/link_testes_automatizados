@@ -2,20 +2,15 @@ Cypress.Commands.add('login', (
     user = Cypress.env('user_name'),
     password = Cypress.env('user_password'),
   ) => {
-    const login = () => {
-      cy.visit('/users/sign_in')
+      cy.visit('/admin/login/')
   
-      cy.get("[data-qa-selector='login_field']").type(user)
-      cy.get("[data-qa-selector='password_field']").type(password, { log: false })
-      cy.get("[data-qa-selector='sign_in_button']").click()
-    }
-  
-    login()
+      cy.get("#id_username").type(user)
+      cy.get("#id_password").type(password, { log: false })
+      cy.get('.submit-row > input').click()
   })
 
 Cypress.Commands.add('logout', () => {
-    cy.get('.qa-user-avatar').click()
-    cy.contains('Sign out').click()
+    cy.get('button').click()
 })
 
 Cypress.Commands.add('gui_createProject', project => {
