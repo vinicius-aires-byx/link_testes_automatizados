@@ -1,6 +1,6 @@
 Cypress.Commands.add('login', (
-    user = Cypress.env('user_name'),
-    password = Cypress.env('user_password'),
+      user = Cypress.env('user_name'),
+      password = Cypress.env('user_password'),
   ) => {
       cy.visit('/admin/login/')
   
@@ -13,11 +13,16 @@ Cypress.Commands.add('logout', () => {
     cy.get('button').click()
 })
 
-Cypress.Commands.add('gui_createProject', project => {
-    cy.visit('/projects/new')
-  
-    cy.get('#project_name').type(project.name)
-    cy.get('#project_description').type(project.description)
-    cy.get('.qa-initialize-with-readme-checkbox').check()
-    cy.contains('Create project').click()
+Cypress.Commands.add('inserirRegra', (
+    
+  ) => {
+    cy.get('.model-regra > :nth-child(2) > .addlink').click()
+    cy.get('#id_nome_regra')
+    cy.get('#id_cliente')
+    cy.get('#id_tipo_produto')
+    cy.get('#id_cd_contrato_tipo')
+    cy.get('#id_condicional')
+    cy.get('#id_campo_comparativo')
+    cy.get('.default').click()
+
   })

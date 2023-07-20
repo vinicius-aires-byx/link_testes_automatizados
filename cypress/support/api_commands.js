@@ -5394,7 +5394,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_fgts', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": "347787900085",
+                "nuContratoFacta": "46302020005",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
