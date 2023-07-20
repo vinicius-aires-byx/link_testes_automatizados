@@ -118,54 +118,32 @@ describe('Analise com sucesso', () => {
 })
 
 describe('Limite Mínimo Idade: 4 Anos; REPROVADO', () => {
-  //beforeEach(() => cy.api_deleteProjects())
-
   it('successfully', () => {
-    const project = {
-      description0: "Limite Mínimo Idade: 4 Anos;"
-    }
-
-    cy.idade_minima_reprovado_pine_inss_representante_legal()
+    cy.idade_minima_reprovado_inss_representante_legal()
       .then(response => {
         expect(response.status).to.equal(201)
-        expect(response.body.regras[0].descricao).to.equal(project.description0)
-        expect(response.body.regras[0].regra_aprovada).to.equal(false)
+        const regraEncontrada = response.body.regras.descricao.find('Limite Mínimo Idade: 4 Anos;');
+        expect(regraEncontrada.regra_aprovada).to.be.false;
       })
-  
   })
 })
 
 describe('Limite Máximo Idade: 80 Anos; REPROVADO', () => {
-  //beforeEach(() => cy.api_deleteProjects())
-
-  it('successfully', () => {
-    const project = {
-      description1: "Limite Máximo Idade: 80 Anos;"
-    }
-
-    cy.idade_maxima_reprovado_pine_inss_representante_legal()
+    cy.idade_maxima_reprovado_inss_representante_legal()
       .then(response => {
         expect(response.status).to.equal(201)
-        expect(response.body.regras[1].descricao).to.equal(project.description1)
-        expect(response.body.regras[1].regra_aprovada).to.equal(false)
+        const regraEncontrada = response.body.regras.descricao.find('');
+        expect(regraEncontrada.regra_aprovada).to.be.false;
       })
-  
-  })
 })
 
 describe('Valor Mínimo CCB: R$ 250,00; REPROVADO', () => {
-  //beforeEach(() => cy.api_deleteProjects())
-
   it('successfully', () => {
-    const project = {
-      description2: "Valor Mínimo CCB: R$ 250,00;"
-    }
-
-    cy.valor_minimo_ccb_reprovado_pine_inss_representante_legal()
+    cy.valor_minimo_ccb_reprovado_inss_representante_legal()
       .then(response => {
         expect(response.status).to.equal(201)
-        expect(response.body.regras[2].descricao).to.equal(project.description2)
-        expect(response.body.regras[2].regra_aprovada).to.equal(false)
+        const regraEncontrada = response.body.regras.descricao.find('');
+        expect(regraEncontrada.regra_aprovada).to.be.false;
       })
   
   })

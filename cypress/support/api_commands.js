@@ -12031,23 +12031,23 @@ Cypress.Commands.add('beneficio_elegivel_reprovado_pine_inss', project => {
 
 //----------------------------------------------Pine INSS Representante Legal----------------------------------------------
 
-Cypress.Commands.add('analise_com_sucesso_pine_inss_representante_legal', project => {
+Cypress.Commands.add('analise_com_sucesso_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "35194050001",
+            "nuContratoFacta": faker.random.numeric(12),
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -12216,28 +12216,28 @@ Cypress.Commands.add('analise_com_sucesso_pine_inss_representante_legal', projec
                 "nuParcela": "8",
                 "dtVencimento": "2023-07-07",
                 "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-07-07"
             },
             {
                 "nuParcela": "9",
                 "dtVencimento": "2023-08-07",
                 "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-08-07"
             },
             {
                 "nuParcela": "10",
                 "dtVencimento": "2023-09-07",
                 "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-09-07"
             },
             {
                 "nuParcela": "11",
@@ -12282,12 +12282,12 @@ Cypress.Commands.add('analise_com_sucesso_pine_inss_representante_legal', projec
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('idade_minima_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('limite_minimo_idade_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -12301,9 +12301,9 @@ Cypress.Commands.add('idade_minima_reprovado_pine_inss_representante_legal', pro
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -12538,12 +12538,12 @@ Cypress.Commands.add('idade_minima_reprovado_pine_inss_representante_legal', pro
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('idade_maxima_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('limite_maximo_idade_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -12557,9 +12557,9 @@ Cypress.Commands.add('idade_maxima_reprovado_pine_inss_representante_legal', pro
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -12794,12 +12794,12 @@ Cypress.Commands.add('idade_maxima_reprovado_pine_inss_representante_legal', pro
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('valor_minimo_ccb_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('valor_minimo_ccb_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -12813,9 +12813,9 @@ Cypress.Commands.add('valor_minimo_ccb_reprovado_pine_inss_representante_legal',
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -13050,12 +13050,12 @@ Cypress.Commands.add('valor_minimo_ccb_reprovado_pine_inss_representante_legal',
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('numero_total_parcelas_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('numero_total_parcelas_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -13069,9 +13069,9 @@ Cypress.Commands.add('numero_total_parcelas_reprovado_pine_inss_representante_le
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -13297,12 +13297,12 @@ Cypress.Commands.add('numero_total_parcelas_reprovado_pine_inss_representante_le
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('janela_parcelas_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('janela_parcelas_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -13316,9 +13316,9 @@ Cypress.Commands.add('janela_parcelas_reprovado_pine_inss_representante_legal', 
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "7",
+            "qtParcelasPagas": "5",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -13553,12 +13553,12 @@ Cypress.Commands.add('janela_parcelas_reprovado_pine_inss_representante_legal', 
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('valor_maximo_ccb_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('valor_maximo_ccb_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -13572,9 +13572,9 @@ Cypress.Commands.add('valor_maximo_ccb_reprovado_pine_inss_representante_legal',
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -13809,12 +13809,12 @@ Cypress.Commands.add('valor_maximo_ccb_reprovado_pine_inss_representante_legal',
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('valor_minimo_parcela_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('valor_minimo_parcela_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -13828,9 +13828,9 @@ Cypress.Commands.add('valor_minimo_parcela_reprovado_pine_inss_representante_leg
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -14065,12 +14065,12 @@ Cypress.Commands.add('valor_minimo_parcela_reprovado_pine_inss_representante_leg
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('blacklist_cpf_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('blacklist_cpf_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -14084,9 +14084,9 @@ Cypress.Commands.add('blacklist_cpf_reprovado_pine_inss_representante_legal', pr
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -14321,12 +14321,12 @@ Cypress.Commands.add('blacklist_cpf_reprovado_pine_inss_representante_legal', pr
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('emissao_documento_x_data_nascimento_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('emissao_documento_x_data_nascimento_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -14340,9 +14340,9 @@ Cypress.Commands.add('emissao_documento_x_data_nascimento_reprovado_pine_inss_re
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -14577,12 +14577,12 @@ Cypress.Commands.add('emissao_documento_x_data_nascimento_reprovado_pine_inss_re
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('contrato_liquidado_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('contrato_liquidado_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -14596,9 +14596,9 @@ Cypress.Commands.add('contrato_liquidado_reprovado_pine_inss_representante_legal
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -14833,12 +14833,12 @@ Cypress.Commands.add('contrato_liquidado_reprovado_pine_inss_representante_legal
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -14852,9 +14852,9 @@ Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_pine_inss_represent
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -15089,12 +15089,12 @@ Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_pine_inss_represent
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -15108,9 +15108,9 @@ Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_pine_inss_represe
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -15345,12 +15345,12 @@ Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_pine_inss_represe
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('taxa_minima_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('taxa_minima_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -15364,9 +15364,9 @@ Cypress.Commands.add('taxa_minima_reprovado_pine_inss_representante_legal', proj
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -15601,12 +15601,12 @@ Cypress.Commands.add('taxa_minima_reprovado_pine_inss_representante_legal', proj
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('beneficio_elegivel_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('beneficio_elegivel_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -15620,9 +15620,9 @@ Cypress.Commands.add('beneficio_elegivel_reprovado_pine_inss_representante_legal
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -15857,12 +15857,12 @@ Cypress.Commands.add('beneficio_elegivel_reprovado_pine_inss_representante_legal
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('taxa_maxima_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('taxa_maxima_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -15876,9 +15876,9 @@ Cypress.Commands.add('taxa_maxima_reprovado_pine_inss_representante_legal', proj
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -16113,12 +16113,12 @@ Cypress.Commands.add('taxa_maxima_reprovado_pine_inss_representante_legal', proj
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('numero_maximo_parcelas_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('numero_maximo_parcelas_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -16132,9 +16132,9 @@ Cypress.Commands.add('numero_maximo_parcelas_reprovado_pine_inss_representante_l
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -16378,12 +16378,12 @@ Cypress.Commands.add('numero_maximo_parcelas_reprovado_pine_inss_representante_l
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -16397,9 +16397,9 @@ Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_pine_ins
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -16634,12 +16634,12 @@ Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_pine_ins
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -16650,12 +16650,12 @@ Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_pine_inss_represen
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
-            "dtContrato": "2023-04-12",
+            "dtContrato": "2024-04-12",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -16890,12 +16890,12 @@ Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_pine_inss_represen
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('numero_minimo_parcelas_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('numero_minimo_parcelas_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -16909,9 +16909,9 @@ Cypress.Commands.add('numero_minimo_parcelas_reprovado_pine_inss_representante_l
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -17119,12 +17119,12 @@ Cypress.Commands.add('numero_minimo_parcelas_reprovado_pine_inss_representante_l
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('tempo_minimo_beneficio_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('tempo_minimo_beneficio_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -17138,9 +17138,9 @@ Cypress.Commands.add('tempo_minimo_beneficio_reprovado_pine_inss_representante_l
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -17375,12 +17375,12 @@ Cypress.Commands.add('tempo_minimo_beneficio_reprovado_pine_inss_representante_l
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -17394,9 +17394,9 @@ Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_pine_inss_repr
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -17500,7 +17500,7 @@ Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_pine_inss_repr
         "parcela": [
             {
                 "nuParcela": "1",
-                "dtVencimento": "2022-12-15",
+                "dtVencimento": "2022-12-20",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
@@ -17631,12 +17631,12 @@ Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_pine_inss_repr
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -17650,9 +17650,9 @@ Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_pine_inss_representante_lega
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -17887,28 +17887,28 @@ Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_pine_inss_representante_lega
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('contrato_duplicado_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('contrato_duplicado_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "9876543210",
+            "nuContratoFacta": "46302020005",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -18143,268 +18143,12 @@ Cypress.Commands.add('contrato_duplicado_reprovado_pine_inss_representante_legal
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('contrato_lista_retritiva_reprovado_pine_inss_representante_legal', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "9876543243211",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 2
-        },
-        "cliente": {
-            "nmCliente": "joao guilherme silva cardoso",
-            "dtNascimento": "2000-08-09",
-            "nmMae": "SIMONE DO ROSARIO SILVA",
-            "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
-            "nmSexo": "M",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuRG": "0501792520132",
-            "nuCpf": "61615160396",
-            "dtEmissaoRg": "2016-10-25",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "PINHEIRO",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
-            "nmEnderecoResidencialCidade": "Porto Alegre",
-            "nmEnderecoResidencialUf": "RS",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "nuCNH": "",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "None",
-            "dsNacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "empresa": {
-                "empresa": "INSS 29979036000140",
-                "profissao": " PROFISSAO NAO DEFINIDA",
-                "dtAdmissao": "2022-12-02",
-                "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
-                "tipoProfissao": "PENSIONISTA",
-                "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
-                "tipoProfissaoOr": "PENSIONISTA"
-            }
-        },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "02806073254",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "Pine"
-    }
-    })
-})
-
-Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('contrato_lista_retritiva_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -18418,9 +18162,9 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_pine_inss_r
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -18655,28 +18399,28 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_pine_inss_r
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('validacao_bureau_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "9876543243210",
+            "nuContratoFacta": "{{nuContratoFacta}}",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -18697,15 +18441,15 @@ Cypress.Commands.add('validacao_bureau_reprovado_pine_inss_representante_legal',
             "tipoProduto": 2
         },
         "cliente": {
-            "nmCliente": "joao guilherme silva cardoso",
-            "dtNascimento": "2000-08-09",
+            "nmCliente": "josé guilherme silva cardoso",
+            "dtNascimento": "2010-08-09",
             "nmMae": "SIMONE DO ROSARIO SILVA",
             "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
             "nmSexo": "M",
             "dsEstadoCivil": "OUTROS",
             "nmEmail": "",
             "nuRG": "0501792520132",
-            "nuCpf": "61615160396",
+            "nuCpf": "02806073254",
             "dtEmissaoRg": "2016-10-25",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "AC",
@@ -18745,7 +18489,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_pine_inss_representante_legal',
             "nmSexo": "F",
             "dsEstadoCivil": "OUTROS",
             "nmEmail": "",
-            "nuCpf": "02806073254",
+            "nuCpf": "61615160396",
             "dtEmissaoRg": "2018-09-19",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "AC",
@@ -18911,12 +18655,268 @@ Cypress.Commands.add('validacao_bureau_reprovado_pine_inss_representante_legal',
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_pine_inss_representante_legal', project => {
+Cypress.Commands.add('validacao_bureau_reprovado_inss_representante_legal', project => {
+    cy.request({
+      method: 'POST',
+      url: `/analise-contrato/`,
+      body: {
+        "contrato": {
+            "nuLote": "42",
+            "nuContratoFacta": "{{nuContratoFacta}}",
+            "cdContratoTipo": "1",
+            "nuCnpjCorrespondente": "01360251000140",
+            "dtDigitacao": "2022-10-04",
+            "dtContrato": "2022-09-15",
+            "dtPrimeiroVencimento": "2022-12-07",
+            "nuCpfAgenteValidador": "01217961160",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
+            "qtParcelasAverbadas": "12",
+            "qtParcelasTotal": "12",
+            "txCETAno": "0.5246999",
+            "txCETMes": "0.0312910",
+            "txEfetivaAno": "0.4357594",
+            "txEfetivaMes": "0.0213000",
+            "vrAberto": "3705.24",
+            "vrContrato": "1166.51",
+            "vrIof": "38.41",
+            "vrParcela": "44.11",
+            "vrVencer": "3705.24",
+            "vrLiberadoCliente": "1166.51",
+            "vrTAC": "0.0",
+            "vrSeguro": "0.0",
+            "nuContratoCCB": "54568972",
+            "recusado": "false",
+            "docsValidados": "false",
+            "tipoProduto": 2
+        },
+        "cliente": {
+            "nmCliente": "josé guilherme silva cardoso",
+            "dtNascimento": "2000-08-09",
+            "nmMae": "SIMONE DO ROSARIO SILVA",
+            "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
+            "nmSexo": "M",
+            "dsEstadoCivil": "OUTROS",
+            "nmEmail": "",
+            "nuRG": "0501792520132",
+            "nuCpf": "61615160396",
+            "dtEmissaoRg": "2016-10-25",
+            "nmOrgaoEmissorRg": "SSP",
+            "nmUfOrgaoEmissorRg": "AC",
+            "dsNaturalidade": "PINHEIRO",
+            "nmEnderecoResidencialTipo": "1",
+            "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
+            "nmEnderecoResidencialNumero": "41",
+            "nmEnderecoResidencialComplento": "None",
+            "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
+            "nmEnderecoResidencialCidade": "Porto Alegre",
+            "nmEnderecoResidencialUf": "RS",
+            "nuEnderecoResidencialCep": "65200000",
+            "nuDddTelefoneCelular": "098984645210",
+            "nuDddTelefoneResidencial": "1",
+            "vrRenda": "1212.0",
+            "nuCNH": "",
+            "tempoResidencia": "0",
+            "tipoLogradouro": "None",
+            "dsNacionalidade": "BRASILEIRA",
+            "vrPatrimonio": "10000.0",
+            "escolaridade": "1",
+            "empresa": {
+                "empresa": "INSS 29979036000140",
+                "profissao": " PROFISSAO NAO DEFINIDA",
+                "dtAdmissao": "2022-12-02",
+                "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
+                "tipoProfissao": "PENSIONISTA",
+                "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
+                "tipoProfissaoOr": "PENSIONISTA"
+            }
+        },
+        "representante": {
+            "nmCliente": "ANGELICA PINTO MAIA",
+            "dtNascimento": "1945-11-22",
+            "nmMae": "RAAIMUNDA NONATA SILVA",
+            "nmPai": "NAO CONSTA NO DOCUMENTO",
+            "nmSexo": "F",
+            "dsEstadoCivil": "OUTROS",
+            "nmEmail": "",
+            "nuCpf": "61615160396",
+            "dtEmissaoRg": "2018-09-19",
+            "nmOrgaoEmissorRg": "SSP",
+            "nmUfOrgaoEmissorRg": "AC",
+            "dsNaturalidade": "ACRELANDIA",
+            "nmEnderecoResidencialTipo": "1",
+            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
+            "nmEnderecoResidencialNumero": "41",
+            "nmEnderecoResidencialComplento": "None",
+            "nmEnderecoResidencialBairro": "JUREICO",
+            "nmEnderecoResidencialCidade": "ACRELANDIA",
+            "nmEnderecoResidencialUf": "MA",
+            "nuEnderecoResidencialCep": "65200000",
+            "nuDddTelefoneCelular": "098984645210",
+            "nuDddTelefoneResidencial": "1",
+            "vrRenda": "1212.0",
+            "tempoResidencia": "0",
+            "tipoLogradouro": "",
+            "nacionalidade": "BRASILEIRA",
+            "vrPatrimonio": "10000.0",
+            "escolaridade": "1",
+            "nuRG": "0207870320028"
+        },
+        "beneficio": {
+            "matricula": "7042811594",
+            "ufBeneficio": "AC",
+            "tipoBeneficio": "87",
+            "vrBeneficio": "1212.0",
+            "dtConcessaoBeneficio": "2019-01-02",
+            "dia_util_pagamento": "",
+            "dia_util_forma_pagamento": ""
+        },
+        "parcela": [
+            {
+                "nuParcela": "1",
+                "dtVencimento": "2022-12-07",
+                "vrParcela": "44.11",
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2022-12-07"
+            },
+            {
+                "nuParcela": "2",
+                "dtVencimento": "2023-01-07",
+                "vrParcela": "44.11",
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-01-07"
+            },
+            {
+                "nuParcela": "3",
+                "dtVencimento": "2023-02-07",
+                "vrParcela": "44.11",
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-02-07"
+            },
+            {
+                "nuParcela": "4",
+                "dtVencimento": "2023-03-07",
+                "vrParcela": "44.11",
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-03-07"
+            },
+            {
+                "nuParcela": "5",
+                "dtVencimento": "2023-04-07",
+                "vrParcela": "44.11",
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-03-07"
+            },
+            {
+                "nuParcela": "6",
+                "dtVencimento": "2023-05-07",
+                "vrParcela": "44.11",
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-03-07"
+            },
+            {
+                "nuParcela": "7",
+                "dtVencimento": "2023-06-07",
+                "vrParcela": "44.11",
+                "recebido_facta": false,
+                "paga": false,
+                "vrPago": "",
+                "dtPagamento": ""
+            },
+            {
+                "nuParcela": "8",
+                "dtVencimento": "2023-07-07",
+                "vrParcela": "44.11",
+                "recebido_facta": false,
+                "paga": false,
+                "vrPago": "",
+                "dtPagamento": ""
+            },
+            {
+                "nuParcela": "9",
+                "dtVencimento": "2023-08-07",
+                "vrParcela": "44.11",
+                "recebido_facta": false,
+                "paga": false,
+                "vrPago": "",
+                "dtPagamento": ""
+            },
+            {
+                "nuParcela": "10",
+                "dtVencimento": "2023-09-07",
+                "vrParcela": "44.11",
+                "recebido_facta": false,
+                "paga": false,
+                "vrPago": "",
+                "dtPagamento": ""
+            },
+            {
+                "nuParcela": "11",
+                "dtVencimento": "2023-10-07",
+                "vrParcela": "44.11",
+                "recebido_facta": false,
+                "paga": false,
+                "vrPago": "",
+                "dtPagamento": ""
+            },
+            {
+                "nuParcela": "12",
+                "dtVencimento": "2023-11-07",
+                "vrParcela": "44.11",
+                "recebido_facta": false,
+                "paga": false,
+                "vrPago": "",
+                "dtPagamento": ""
+            }
+        ],
+        "contratosOrigem": [
+            {
+                "dtContratoOrigem": "0001-01-01",
+                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
+                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
+                "nuContratoOrigem": "0",
+                "nuCnpjCorrespondenteOrigem": "0",
+                "cdInstFinanceiraOrigem": "149",
+                "vrContratoOrigem": "0.0",
+                "vrSaldoContratoOrigem": "0.0",
+                "contrato": ""
+            }
+        ],
+        "dadosBancariosSacado": {
+            "cdContaTipo": "1",
+            "nuBanco": "001",
+            "nuAgencia": "6044",
+            "nuConta": "001368184",
+            "nuContaDigito": "2",
+            "nuCpfTitular": "61615160396",
+            "nuCnpjTitular": 1,
+            "cdCreditoTipo": "1"
+        },
+        "anexos": [],
+        "operacao": "automacao"
+    }
+    })
+})
+
+Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -18930,9 +18930,9 @@ Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_pine_in
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -19167,7 +19167,7 @@ Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_pine_in
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
@@ -19186,9 +19186,9 @@ Cypress.Commands.add('situacao_cpf_receita_reprovado_pine_inss_representante_leg
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -19423,7 +19423,7 @@ Cypress.Commands.add('situacao_cpf_receita_reprovado_pine_inss_representante_leg
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
