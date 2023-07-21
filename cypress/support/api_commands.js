@@ -1,5 +1,6 @@
-//----------------------------------------------FGTS----------------------------------------------
 import { faker } from '@faker-js/faker'
+//----------------------------------------------FGTS----------------------------------------------
+
 Cypress.Commands.add('analise_com_sucesso_fgts', project => {
     cy.request({
         method: 'POST',
@@ -19675,6 +19676,7 @@ Cypress.Commands.add('situacao_cpf_receita_reprovado_inss_representante_legal', 
 })
 
 //----------------------------------------------Cartão Benefício Representante Legal----------------------------------------------
+
 Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
@@ -24530,7 +24532,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_cartao_beneficio_representant
     })
 })
 
-Cypress.Commands.add('contrato_lista_retritiva_reprovado_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('contrato_lista_restritiva_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
