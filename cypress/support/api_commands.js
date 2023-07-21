@@ -14326,7 +14326,7 @@ Cypress.Commands.add('blacklist_cpf_reprovado_inss_representante_legal', project
     })
 })
 
-Cypress.Commands.add('emissao_documento_x_data_nascimento_reprovado_inss_representante_legal', project => {
+Cypress.Commands.add('data_emissao_documento_x_data_nascimento_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -18411,7 +18411,7 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_inss_repres
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "{{nuContratoFacta}}",
+            "nuContratoFacta": faker.random.numeric(12),
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -18667,7 +18667,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_inss_representante_legal', proj
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "{{nuContratoFacta}}",
+            "nuContratoFacta": faker.random.numeric(12),
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
