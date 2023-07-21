@@ -1,9 +1,9 @@
 describe('Analise com sucesso', () => {
   it('successfully', () => {
-    cy.analise_com_sucesso_inss_representante_legal()
+    cy.analise_com_sucesso_inss()
       .then(response => {
         expect(response.status).to.equal(201)
-        let regras = response.body.regras.find(m => m.descricao === "Limite Mínimo Idade: 4 Anos;")
+        let regras = response.body.regras.find(m => m.descricao === "Limite Mínimo Idade: 21 Anos;")
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Limite Máximo Idade: 80 Anos;")
         expect(regras.regra_aprovada).to.be.true
@@ -13,7 +13,7 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Janela Primeira Parcelas: 60 dias;")
         expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Valor Máximo CCB: R$ 20.000,00;")
+        regras = response.body.regras.find(m => m.descricao === "Valor Máximo CCB: R$ 20.000,00;")             
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Valor Mínimo de Parcela: R$ 30,00;")
         expect(regras.regra_aprovada).to.be.true
@@ -29,13 +29,9 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Taxa Mínima: 1,80;")
         expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Benefício Elegível")
-        expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Taxa Máxima: 2,14;")
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Número Máximo de Parcelas: 12;")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Limite Máximo Idade RL: 65 Anos;")
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "CCB emitida a menos de 8 dias;")
         expect(regras.regra_aprovada).to.be.true
@@ -51,16 +47,6 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Contrato em lista restritiva;")
         expect(regras.regra_aprovada).to.be.true
-        //regras = response.body.regras.find(m => m.descricao === "Representante Legal Nato;")
-        //expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - NOME:5")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - OBITO")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - PEP")
-        expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1")
@@ -69,20 +55,20 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP")
         expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Situação CPF Receita Rep.Le: Diferente de Regular;")
-        expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Situação CPF Receita: Diferente de Regular;")
+        expect(regras.regra_aprovada).to.be.true
+        regras = response.body.regras.find(m => m.descricao === "Benefícios elegíveis")
         expect(regras.regra_aprovada).to.be.true
       })
   })
 })
 
-describe('Limite Mínimo Idade: 4 Anos; REPROVADO', () => {
+describe('Limite Mínimo Idade: 21 Anos; REPROVADO', () => {
   it('successfully', () => {
-    cy.limite_minimo_idade_reprovado_inss_representante_legal()
+    cy.limite_minimo_idade_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
-        let regraEncontrada = response.body.regras.find(m => m.descricao === "Limite Mínimo Idade: 4 Anos;");
+        let regraEncontrada = response.body.regras.find(m => m.descricao === "Limite Mínimo Idade: 21 Anos;");
         expect(regraEncontrada.regra_aprovada).to.be.false;
       })
   })
@@ -90,7 +76,7 @@ describe('Limite Mínimo Idade: 4 Anos; REPROVADO', () => {
 
 describe('Limite Máximo Idade: 80 Anos; REPROVADO', () => {
   it('successfully', () => {
-    cy.limite_maximo_idade_reprovado_inss_representante_legal()
+    cy.limite_maximo_idade_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Limite Máximo Idade: 80 Anos;');
@@ -101,7 +87,7 @@ describe('Limite Máximo Idade: 80 Anos; REPROVADO', () => {
 
 describe('Valor Mínimo CCB: R$ 250,00; REPROVADO', () => {
   it('successfully', () => {
-    cy.valor_minimo_ccb_reprovado_inss_representante_legal()
+    cy.valor_minimo_ccb_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Valor Mínimo CCB: R$ 250,00;');
@@ -112,7 +98,7 @@ describe('Valor Mínimo CCB: R$ 250,00; REPROVADO', () => {
 
 describe('Número Total de Parcelas; REPROVADO', () => {
   it('successfully', () => {
-    cy.numero_total_parcelas_reprovado_inss_representante_legal()
+    cy.numero_total_parcelas_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Número Total de Parcelas;');
@@ -123,7 +109,7 @@ describe('Número Total de Parcelas; REPROVADO', () => {
 
 describe('Janela Primeira Parcelas: 60 dias; REPROVADO', () => {
   it('successfully', () => {
-    cy.janela_parcelas_reprovado_inss_representante_legal()
+    cy.janela_parcelas_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Janela Primeira Parcelas: 60 dias;');
@@ -134,7 +120,7 @@ describe('Janela Primeira Parcelas: 60 dias; REPROVADO', () => {
 
 describe('Valor Máximo CCB: R$ 20.000,00; REPROVADO', () => {
   it('successfully', () => {
-    cy.valor_maximo_ccb_reprovado_inss_representante_legal()
+    cy.valor_maximo_ccb_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Valor Máximo CCB: R$ 20.000,00;');
@@ -145,7 +131,7 @@ describe('Valor Máximo CCB: R$ 20.000,00; REPROVADO', () => {
 
 describe('Valor Mínimo de Parcela: R$ 30,00; REPROVADO', () => {
   it('successfully', () => {
-    cy.valor_minimo_parcela_reprovado_inss_representante_legal()
+    cy.valor_minimo_parcela_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Valor Mínimo de Parcela: R$ 30,00;');
@@ -156,7 +142,7 @@ describe('Valor Mínimo de Parcela: R$ 30,00; REPROVADO', () => {
 
 describe('Blacklist CPFs; REPROVADO', () => {
   it('successfully', () => {
-    cy.blacklist_cpf_reprovado_inss_representante_legal()
+    cy.blacklist_cpf_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Blacklist CPFs;');
@@ -167,7 +153,7 @@ describe('Blacklist CPFs; REPROVADO', () => {
 
 describe('Data de emissão do documento x Data de nascimento; REPROVADO', () => {
   it('successfully', () => {
-    cy.data_emissao_documento_x_data_nascimento_reprovado_inss_representante_legal()
+    cy.data_emissao_documento_x_data_nascimento_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Data de emissão do documento x Data de nascimento;');
@@ -178,7 +164,7 @@ describe('Data de emissão do documento x Data de nascimento; REPROVADO', () => 
 
 describe('Contrato Liquidado; REPROVADO', () => {
   it('successfully', () => {
-    cy.contrato_liquidado_reprovado_inss_representante_legal()
+    cy.contrato_liquidado_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Contrato Liquidado;');
@@ -189,7 +175,7 @@ describe('Contrato Liquidado; REPROVADO', () => {
 
 describe('Parcelas Subsequentes Mensal; REPROVADO', () => {
   it('successfully', () => {
-    cy.parcelas_subsequentes_mensal_reprovado_inss_representante_legal()
+    cy.parcelas_subsequentes_mensal_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Parcelas Subsequentes Mensal;');
@@ -200,7 +186,7 @@ describe('Parcelas Subsequentes Mensal; REPROVADO', () => {
 
 describe('Inadimplência Parcela/Contrato; REPROVADO', () => {
   it('successfully', () => {
-    cy.inadimplencia_parcela_contrato_reprovado_inss_representante_legal()
+    cy.inadimplencia_parcela_contrato_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Inadimplência Parcela/Contrato;');
@@ -211,7 +197,7 @@ describe('Inadimplência Parcela/Contrato; REPROVADO', () => {
 
 describe('Taxa Mínima: 1,80; REPROVADO', () => {
   it('successfully', () => {
-    cy.taxa_minima_reprovado_inss_representante_legal()
+    cy.taxa_minima_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Taxa Mínima: 1,80;');
@@ -220,20 +206,9 @@ describe('Taxa Mínima: 1,80; REPROVADO', () => {
   })
 })
 
-describe('Benefício Elegível REPROVADO', () => {
-  it('successfully', () => {
-    cy.beneficio_elegivel_reprovado_inss_representante_legal()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        let regraEncontrada = response.body.regras.find(m => m.descricao === 'Benefício Elegível');
-        expect(regraEncontrada.regra_aprovada).to.be.false;
-      })
-  })
-})
-
 describe('Taxa Máxima: 2,14; REPROVADO', () => {
   it('successfully', () => {
-    cy.taxa_maxima_reprovado_inss_representante_legal()
+    cy.taxa_maxima_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Taxa Máxima: 2,14;');
@@ -244,7 +219,7 @@ describe('Taxa Máxima: 2,14; REPROVADO', () => {
 
 describe('Número Máximo de Parcelas: 12; REPROVADO', () => {
   it('successfully', () => {
-    cy.numero_maximo_parcelas_reprovado_inss_representante_legal()
+    cy.numero_maximo_parcelas_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Número Máximo de Parcelas: 12;');
@@ -253,20 +228,9 @@ describe('Número Máximo de Parcelas: 12; REPROVADO', () => {
   })
 })
 
-describe('Limite Máximo Idade RL: 65 Anos; REPROVADO', () => {
-  it('successfully', () => {
-    cy.limite_maximo_idade_representante_legal_reprovado_inss_representante_legal()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        let regraEncontrada = response.body.regras.find(m => m.descricao === 'Limite Máximo Idade RL: 65 Anos;');
-        expect(regraEncontrada.regra_aprovada).to.be.false;
-      })
-  })
-})
-
 describe('CCB emitida a menos de 8 dias; REPROVADO', () => {
   it('successfully', () => {
-    cy.ccb_imitida_a_menos_de_8_dias_reprovado_inss_representante_legal()
+    cy.ccb_imitida_a_menos_de_8_dias_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'CCB emitida a menos de 8 dias;');
@@ -277,7 +241,7 @@ describe('CCB emitida a menos de 8 dias; REPROVADO', () => {
 
 describe('Número Mínimo de Parcelas: 10; REPROVADO', () => {
   it('successfully', () => {
-    cy.numero_minimo_parcelas_reprovado_inss_representante_legal()
+    cy.numero_minimo_parcelas_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Número Mínimo de Parcelas: 10;');
@@ -288,7 +252,7 @@ describe('Número Mínimo de Parcelas: 10; REPROVADO', () => {
 
 describe('Tempo mínimo de benefício: 12 Meses; REPROVADO', () => {
   it('successfully', () => {
-    cy.tempo_minimo_beneficio_reprovado_inss_representante_legal()
+    cy.tempo_minimo_beneficio_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Tempo mínimo de benefício: 12 Meses;');
@@ -299,7 +263,7 @@ describe('Tempo mínimo de benefício: 12 Meses; REPROVADO', () => {
 
 describe('Dia de vencimento fora do range definido; REPROVADO', () => {
   it('successfully', () => {
-    cy.vencimento_fora_do_range_definido_reprovado_inss_representante_legal()
+    cy.vencimento_fora_do_range_definido_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Dia de vencimento fora do range definido;');
@@ -310,7 +274,7 @@ describe('Dia de vencimento fora do range definido; REPROVADO', () => {
 
 describe('CNPJ Correspondente não cadastrado; REPROVADO', () => {
   it('successfully', () => {
-    cy.cnpj_nao_cadastrado_reprovado_inss_representante_legal()
+    cy.cnpj_nao_cadastrado_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'CNPJ Correspondente não cadastrado;');
@@ -321,7 +285,7 @@ describe('CNPJ Correspondente não cadastrado; REPROVADO', () => {
 
 describe('Contrato duplicado; REPROVADO', () => {
   it('successfully', () => {
-    cy.contrato_duplicado_reprovado_inss_representante_legal()
+    cy.contrato_duplicado_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Contrato duplicado;');
@@ -332,7 +296,7 @@ describe('Contrato duplicado; REPROVADO', () => {
 
 describe('Contrato em lista restritiva; REPROVADO', () => {
   it('successfully', () => {
-    cy.contrato_lista_restritiva_reprovado_inss_representante_legal()
+    cy.contrato_lista_restritiva_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Contrato em lista restritiva;');
@@ -341,39 +305,9 @@ describe('Contrato em lista restritiva; REPROVADO', () => {
   })
 })
 
-/*
-describe('Representante Legal Nato; REPROVADO', () => {
-  it('successfully', () => {
-    cy.()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        const regraEncontrada = response.body.regras.find(m => m.descricao === 'Representante Legal Nato;');
-        expect(regraEncontrada.regra_aprovada).to.be.false;
-      })
-  })
-})
-*/
-
-describe('Validação RL - Nome, Nascimento, Obito, PEP; REPROVADO', () => {
-  it('successfully', () => {
-    cy.validacao_bureau_representante_legal_reprovado_inss_representante_legal()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        let regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
-        expect(regras.regra_aprovada).to.be.false
-        regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - NOME:5")
-        expect(regras.regra_aprovada).to.be.false
-        regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - OBITO")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - PEP")
-        expect(regras.regra_aprovada).to.be.true
-      })
-  })
-})
-
 describe('Validação Bureau - Nome, Nascimento, Obito, PEP; REPROVADO', () => {
   it('successfully', () => {
-    cy.validacao_bureau_reprovado_inss_representante_legal()
+    cy.validacao_bureau_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         let regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
@@ -388,20 +322,9 @@ describe('Validação Bureau - Nome, Nascimento, Obito, PEP; REPROVADO', () => {
   })
 })
 
-describe('Situação CPF Receita Rep.Le: Diferente de Regular; REPROVADO', () => {
-  it('successfully', () => {
-    cy.situacao_cpf_receita_representante_legal_reprovado_inss_representante_legal()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        const regraEncontrada = response.body.regras.find(m => m.descricao === 'Situação CPF Receita Rep.Le: Diferente de Regular;');
-        expect(regraEncontrada.regra_aprovada).to.be.false;
-      })
-  })
-})
-
 describe('Situação CPF Receita: Diferente de Regular; REPROVADO', () => {
   it('successfully', () => {
-    cy.situacao_cpf_receita_reprovado_inss_representante_legal()
+    cy.situacao_cpf_receita_reprovado_inss()
       .then(response => {
         expect(response.status).to.equal(201)
         const regraEncontrada = response.body.regras.find(m => m.descricao === 'Situação CPF Receita: Diferente de Regular;');
@@ -410,5 +333,13 @@ describe('Situação CPF Receita: Diferente de Regular; REPROVADO', () => {
   })
 })
 
-
-
+describe('Benefícios elegíveis REPROVADO', () => {
+  it('successfully', () => {
+    cy.beneficio_elegivel_reprovado_inss()
+      .then(response => {
+        expect(response.status).to.equal(201)
+        let regraEncontrada = response.body.regras.find(m => m.descricao === 'Benefícios elegíveis');
+        expect(regraEncontrada.regra_aprovada).to.be.false;
+      })
+  })
+})
