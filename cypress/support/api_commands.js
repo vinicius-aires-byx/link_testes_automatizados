@@ -5643,7 +5643,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_fgts', project => {
     })
 })
 
-//----------------------------------------------Pine INSS----------------------------------------------
+//----------------------------------------------INSS----------------------------------------------
 
 Cypress.Commands.add('analise_com_sucesso_inss', project => {
     cy.request({
@@ -12275,7 +12275,7 @@ Cypress.Commands.add('beneficio_elegivel_reprovado_inss', project => {
 })
 
 
-//----------------------------------------------Pine INSS Representante Legal----------------------------------------------
+//----------------------------------------------INSS Representante Legal----------------------------------------------
 
 Cypress.Commands.add('analise_com_sucesso_inss_representante_legal', project => {
     cy.request({
@@ -19674,15 +19674,15 @@ Cypress.Commands.add('situacao_cpf_receita_reprovado_inss_representante_legal', 
     })
 })
 
-//----------------------------------------------Pine Cartão Benefício Representante Legal----------------------------------------------
-Cypress.Commands.add('analise_com_sucesso_pine_cartao_beneficio_representante_legal', project => {
+//----------------------------------------------Cartão Benefício Representante Legal----------------------------------------------
+Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "35194050001",
+            "nuContratoFacta": faker.random.numeric(12),
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -19786,7 +19786,7 @@ Cypress.Commands.add('analise_com_sucesso_pine_cartao_beneficio_representante_le
         "beneficio": {
             "matricula": "1892433467",
             "ufBeneficio": "MA",
-            "tipoBeneficio": "87",
+            "tipoBeneficio": "1",
             "vrBeneficio": "1212.0",
             "dtConcessaoBeneficio": "2019-01-02",
             "dia_util_pagamento": "",
@@ -19860,10 +19860,10 @@ Cypress.Commands.add('analise_com_sucesso_pine_cartao_beneficio_representante_le
                 "nuParcela": "8",
                 "dtVencimento": "2023-07-07",
                 "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
+                "recebido_facta": true,
+                "paga": true,
+                "vrPago": "44.11",
+                "dtPagamento": "2023-07-07"
             },
             {
                 "nuParcela": "9",
@@ -19926,12 +19926,12 @@ Cypress.Commands.add('analise_com_sucesso_pine_cartao_beneficio_representante_le
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
     })
 })
 
-Cypress.Commands.add('idade_minima_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('limite_minimo_idade_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -19945,9 +19945,9 @@ Cypress.Commands.add('idade_minima_reprovado_pine_cartao_beneficio_representante
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -20182,13 +20182,12 @@ Cypress.Commands.add('idade_minima_reprovado_pine_cartao_beneficio_representante
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
-        
     })
 })
 
-Cypress.Commands.add('idade_maxima_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('limite_maximo_idade_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -20202,9 +20201,9 @@ Cypress.Commands.add('idade_maxima_reprovado_pine_cartao_beneficio_representante
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -20439,13 +20438,12 @@ Cypress.Commands.add('idade_maxima_reprovado_pine_cartao_beneficio_representante
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
-        
     })
 })
 
-Cypress.Commands.add('valor_minimo_ccb_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('valor_minimo_ccb_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -20459,9 +20457,9 @@ Cypress.Commands.add('valor_minimo_ccb_reprovado_pine_cartao_beneficio_represent
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -20696,13 +20694,12 @@ Cypress.Commands.add('valor_minimo_ccb_reprovado_pine_cartao_beneficio_represent
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
-        
     })
 })
 
-Cypress.Commands.add('valor_maximo_ccb_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('valor_maximo_ccb_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -20716,9 +20713,9 @@ Cypress.Commands.add('valor_maximo_ccb_reprovado_pine_cartao_beneficio_represent
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -20953,13 +20950,12 @@ Cypress.Commands.add('valor_maximo_ccb_reprovado_pine_cartao_beneficio_represent
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
-        
     })
 })
 
-Cypress.Commands.add('taxa_maxima_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('taxa_maxima_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -20973,9 +20969,9 @@ Cypress.Commands.add('taxa_maxima_reprovado_pine_cartao_beneficio_representante_
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -21210,14 +21206,12 @@ Cypress.Commands.add('taxa_maxima_reprovado_pine_cartao_beneficio_representante_
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('numero_total_parcelas_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('numero_total_parcelas_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -21231,9 +21225,9 @@ Cypress.Commands.add('numero_total_parcelas_reprovado_pine_cartao_beneficio_repr
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -21459,14 +21453,12 @@ Cypress.Commands.add('numero_total_parcelas_reprovado_pine_cartao_beneficio_repr
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('contrato_liquidado_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('contrato_liquidado_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -21480,9 +21472,9 @@ Cypress.Commands.add('contrato_liquidado_reprovado_pine_cartao_beneficio_represe
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -21717,14 +21709,12 @@ Cypress.Commands.add('contrato_liquidado_reprovado_pine_cartao_beneficio_represe
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -21738,9 +21728,9 @@ Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_pine_cartao_benef
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -21975,14 +21965,12 @@ Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_pine_cartao_benef
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -21996,9 +21984,9 @@ Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_pine_cartao_benefic
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -22233,14 +22221,12 @@ Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_pine_cartao_benefic
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('beneficio_elegivel_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('beneficio_elegivel_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -22254,9 +22240,9 @@ Cypress.Commands.add('beneficio_elegivel_reprovado_pine_cartao_beneficio_represe
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -22491,14 +22477,12 @@ Cypress.Commands.add('beneficio_elegivel_reprovado_pine_cartao_beneficio_represe
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('limite_minimo_idade_representante_legal_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('limite_minimo_idade_representante_legal_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -22512,9 +22496,9 @@ Cypress.Commands.add('limite_minimo_idade_representante_legal_reprovado_pine_car
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -22749,14 +22733,12 @@ Cypress.Commands.add('limite_minimo_idade_representante_legal_reprovado_pine_car
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -22770,9 +22752,9 @@ Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_pine_car
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -23007,14 +22989,12 @@ Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_pine_car
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -23025,12 +23005,12 @@ Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_pine_cartao_benefi
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
-            "dtContrato": "2023-04-12",
+            "dtContrato": "2024-04-12",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -23265,14 +23245,12 @@ Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_pine_cartao_benefi
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('tempo_minimo_beneficio_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('tempo_minimo_beneficio_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -23286,9 +23264,9 @@ Cypress.Commands.add('tempo_minimo_beneficio_reprovado_pine_cartao_beneficio_rep
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -23523,14 +23501,12 @@ Cypress.Commands.add('tempo_minimo_beneficio_reprovado_pine_cartao_beneficio_rep
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('valor_minimo_parcela_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('valor_minimo_parcela_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -23544,9 +23520,9 @@ Cypress.Commands.add('valor_minimo_parcela_reprovado_pine_cartao_beneficio_repre
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -23781,14 +23757,12 @@ Cypress.Commands.add('valor_minimo_parcela_reprovado_pine_cartao_beneficio_repre
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -23802,9 +23776,9 @@ Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_pine_cartao_be
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -24039,14 +24013,12 @@ Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_pine_cartao_be
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -24060,9 +24032,9 @@ Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_pine_cartao_beneficio_repres
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -24297,30 +24269,28 @@ Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_pine_cartao_beneficio_repres
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('contrato_duplicado_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('contrato_duplicado_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "9876543210",
+            "nuContratoFacta": "46302020005",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -24555,14 +24525,12 @@ Cypress.Commands.add('contrato_duplicado_reprovado_pine_cartao_beneficio_represe
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('contrato_lista_retritiva_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('contrato_lista_retritiva_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -24576,9 +24544,9 @@ Cypress.Commands.add('contrato_lista_retritiva_reprovado_pine_cartao_beneficio_r
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -24813,30 +24781,28 @@ Cypress.Commands.add('contrato_lista_retritiva_reprovado_pine_cartao_beneficio_r
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('validacao_bureau_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('validacao_bureau_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "9876543243210",
+            "nuContratoFacta": faker.random.numeric(12),
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -24857,8 +24823,8 @@ Cypress.Commands.add('validacao_bureau_reprovado_pine_cartao_beneficio_represent
             "tipoProduto": 3
         },
         "cliente": {
-            "nmCliente": "joao guilherme silva cardoso",
-            "dtNascimento": "2000-08-09",
+            "nmCliente": "josé guilherme silva cardoso",
+            "dtNascimento": "2001-08-09",
             "nmMae": "SIMONE DO ROSARIO SILVA",
             "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
             "nmSexo": "M",
@@ -25071,14 +25037,12 @@ Cypress.Commands.add('validacao_bureau_reprovado_pine_cartao_beneficio_represent
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('situacao_cpf_receita_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('situacao_cpf_receita_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -25092,9 +25056,9 @@ Cypress.Commands.add('situacao_cpf_receita_reprovado_pine_cartao_beneficio_repre
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -25329,30 +25293,28 @@ Cypress.Commands.add('situacao_cpf_receita_reprovado_pine_cartao_beneficio_repre
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "9876543243211",
+            "nuContratoFacta": faker.random.numeric(12),
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -25373,7 +25335,7 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_pine_cartao
             "tipoProduto": 3
         },
         "cliente": {
-            "nmCliente": "joao guilherme silva cardoso",
+            "nmCliente": "josé guilherme silva cardoso",
             "dtNascimento": "2000-08-09",
             "nmMae": "SIMONE DO ROSARIO SILVA",
             "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
@@ -25421,7 +25383,7 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_pine_cartao
             "nmSexo": "F",
             "dsEstadoCivil": "OUTROS",
             "nmEmail": "",
-            "nuCpf": "02806073254",
+            "nuCpf": "61615160396",
             "dtEmissaoRg": "2018-09-19",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "AC",
@@ -25587,14 +25549,12 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_pine_cartao
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
-      
     })
 })
 
-Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_pine_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
@@ -25608,9 +25568,9 @@ Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_pine_ca
             "dtContrato": "2022-09-15",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "12",
-            "qtParcelasPagas": "0",
-            "qtParcelasVencer": "12",
+            "qtParcelasAberto": "6",
+            "qtParcelasPagas": "6",
+            "qtParcelasVencer": "4",
             "qtParcelasAverbadas": "12",
             "qtParcelasTotal": "12",
             "txCETAno": "0.5246999",
@@ -25845,8 +25805,7 @@ Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_pine_ca
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "Pine"
+        "operacao": "automacao"
     }
-        
     })
 })
