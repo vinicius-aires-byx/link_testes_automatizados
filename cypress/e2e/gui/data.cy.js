@@ -130,7 +130,7 @@ describe('Inserir Correspondente', () => {
     cy.login()
   })
 
-  it.only('successfully', () => {
+  it('successfully', () => {
     
     cy.inserirCorrespondente()
     cy.get('.messagelist > .success').should('be.visible')

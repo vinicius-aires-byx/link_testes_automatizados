@@ -11,6 +11,17 @@ Cypress.Commands.add('logout', () => {
     cy.get('button').click()
 })
 
+//-------------------------------------------------DELETE GERAL-------------------------------------------------
+Cypress.Commands.add('deletar', () => {
+  Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+  })
+  cy.get(':first-child > .action-checkbox > .action-select').click()
+  cy.get('select').select(1)
+  cy.get('.button').click()
+  cy.get('div > [type="submit"]').click()
+})
+
 //-------------------------------------------------CORE-------------------------------------------------
 Cypress.Commands.add('inserirRegra', () => {
   Cypress.on('uncaught:exception', (err, runnable) => {
@@ -58,18 +69,6 @@ Cypress.Commands.add('inserirParametrosSistema', () => {
     cy.get('#id_ativo').click()
     cy.get('.default').click()
 })
-
-Cypress.Commands.add('deletar', () => {
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    return false
-  })
-  cy.get(':first-child > .action-checkbox > .action-select').click()
-  cy.get('select').select(1)
-  cy.get('.button').click()
-  cy.get('div > [type="submit"]').click()
-})
-
-
 
 //-------------------------------------------------DATA-------------------------------------------------
 Cypress.Commands.add('inserirBancoPermitido', () => {
@@ -181,7 +180,7 @@ Cypress.Commands.add('inserirCorrespondente', () => {
     return false
   })
     cy.get('.model-correspondente > :nth-child(2) > .addlink').click()
-    cy.get('#id_nmCorrespondente').select(Cypress.env('razao_social'))
+    cy.get('#id_nmCorrespondente').type(Cypress.env('razao_social'))
     cy.get('#id_cliente').select(Cypress.env('cliente'))
     cy.get('#id_nuCnpj').type(Cypress.env('cnpj_correspondente'))
     cy.get('#id_nuEnderecoResidencialCep').type(Cypress.env('cep'))
