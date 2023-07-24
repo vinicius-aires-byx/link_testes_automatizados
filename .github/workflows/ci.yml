@@ -1,4 +1,4 @@
-name: API tests 🧪
+name: Cessão tests 🧪
 on:  
   push:
   schedule: ## Schedule the job to run at 12.am daily.
