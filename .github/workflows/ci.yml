@@ -1,8 +1,8 @@
 name: Cessão tests 🧪
 on:  
-  #push:
-  schedule: ## Schedule the job to run at 12.am daily.
-    - cron: '0 12 * * *'
+  push:
+  #schedule: ## Schedule the job to run at 12.am daily.
+    #- cron: '0 12 * * *'
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
