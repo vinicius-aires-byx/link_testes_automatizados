@@ -26,7 +26,7 @@ describe('Inserir Cliente', () => {
   })
 })
 
-describe('Inserir Parametros do Sistema', () => {
+describe('Inserir Parâmetros do Sistema', () => {
   beforeEach(() => {
     cy.login()
   })
