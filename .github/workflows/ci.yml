@@ -1,6 +1,6 @@
 name: Cessão tests 🧪
 on:  
-  #push:
+  push:
   schedule: ## Schedule the job to run at 12.am daily.
     - cron: '0 12 * * *'
 jobs:
