@@ -5395,7 +5395,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_fgts', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": "46302020005",
+                "nuContratoFacta": "64209610006",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -11002,7 +11002,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_inss', project => {
       body: {
         "contrato": {
             "nuLote": "1991",
-            "nuContratoFacta": "46302020005",
+            "nuContratoFacta": "65339270009",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -18146,7 +18146,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_inss_representante_legal', pr
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "46302020005",
+            "nuContratoFacta": "66074870001",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -24283,7 +24283,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_cartao_beneficio_representant
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "46302020005",
+            "nuContratoFacta": "66075660000",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
