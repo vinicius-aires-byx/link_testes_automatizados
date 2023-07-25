@@ -62,7 +62,7 @@ describe('Inserir Restrição Cidade', () => {
 
   it('successfully', () => {
     
-    cy.inserirRestricaoCPF()
+    cy.inserirRestricaoCEP()
     cy.get('.messagelist > .success').should('be.visible')
     cy.deletar()
     cy.get('.messagelist > .success').should('be.visible')
