@@ -53,6 +53,8 @@ describe('Analise com sucesso', () => {
       expect(regras.regra_aprovada).to.be.true
       regras = response.body.regras.find(m => m.descricao === "Contrato duplicado;")
       expect(regras.regra_aprovada).to.be.true
+      regras = response.body.regras.find(m => m.descricao === "Parcela Media;")
+      expect(regras.regra_aprovada).to.be.true
     })
   })
 })
@@ -302,6 +304,17 @@ describe('Contrato duplicado; REPROVADO', () => {
     .then((response) => {
       expect(response.status).to.equal(201);
       let regras = response.body.regras.find(m => m.descricao === "Contrato duplicado;")
+      expect(regras.regra_aprovada).to.be.false
+    })
+  })
+})
+
+describe('Parcela Media; REPROVADO', () => {
+  it('successfully', () => {
+    cy.parcela_media_reprovado_fgts()
+    .then((response) => {
+      expect(response.status).to.equal(201);
+      let regras = response.body.regras.find(m => m.descricao === "Parcela Media;")
       expect(regras.regra_aprovada).to.be.false
     })
   })

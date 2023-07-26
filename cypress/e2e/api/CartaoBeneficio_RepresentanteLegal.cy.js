@@ -5,7 +5,7 @@ describe('Analise com sucesso', () => {
           expect(response.status).to.equal(201)
           let regras = response.body.regras.find(m => m.descricao === "Limite Mínimo Idade: 4 Anos;")
           expect(regras.regra_aprovada).to.be.true
-          regras = response.body.regras.find(m => m.descricao === "Limite Máximo Idade: 84 anos;")
+          regras = response.body.regras.find(m => m.descricao === "Limite Máximo Idade: 84 Anos;")
           expect(regras.regra_aprovada).to.be.true
           regras = response.body.regras.find(m => m.descricao === "Valor Mínimo CCB: R$ 300,00;")
           expect(regras.regra_aprovada).to.be.true
@@ -82,7 +82,7 @@ describe('Analise com sucesso', () => {
       cy.limite_maximo_idade_reprovado_cartao_beneficio_representante_legal()
         .then(response => {
           expect(response.status).to.equal(201)
-          let regraEncontrada = response.body.regras.find(m => m.descricao === 'Limite Máximo Idade: 84 anos;');
+          let regraEncontrada = response.body.regras.find(m => m.descricao === 'Limite Máximo Idade: 84 Anos;');
           expect(regraEncontrada.regra_aprovada).to.be.false;
         })
     })
