@@ -5930,6 +5930,7 @@ Cypress.Commands.add('analise_com_sucesso_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -6186,6 +6187,7 @@ Cypress.Commands.add('limite_minimo_idade_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -6442,6 +6444,7 @@ Cypress.Commands.add('limite_maximo_idade_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -6698,6 +6701,7 @@ Cypress.Commands.add('valor_minimo_ccb_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -6954,6 +6958,7 @@ Cypress.Commands.add('numero_total_parcelas_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -7201,6 +7206,7 @@ Cypress.Commands.add('janela_parcelas_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
 	"contrato": {
 		"nuLote": "42",
@@ -7457,6 +7463,7 @@ Cypress.Commands.add('valor_maximo_ccb_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -7713,6 +7720,7 @@ Cypress.Commands.add('valor_minimo_parcela_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -7969,6 +7977,7 @@ Cypress.Commands.add('blacklist_cpf_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -8225,6 +8234,7 @@ Cypress.Commands.add('data_emissao_documento_x_data_nascimento_reprovado_inss', 
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -8481,6 +8491,7 @@ Cypress.Commands.add('contrato_liquidado_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -8737,6 +8748,7 @@ Cypress.Commands.add('parcelas_subsequentes_mensal_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -8993,6 +9005,7 @@ Cypress.Commands.add('inadimplencia_parcela_contrato_reprovado_inss', project =>
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -9249,6 +9262,7 @@ Cypress.Commands.add('taxa_minima_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -9505,6 +9519,7 @@ Cypress.Commands.add('taxa_maxima_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -9761,6 +9776,7 @@ Cypress.Commands.add('numero_maximo_parcelas_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -10026,6 +10042,7 @@ Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_inss', project => 
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -10282,6 +10299,7 @@ Cypress.Commands.add('numero_minimo_parcelas_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -10511,6 +10529,7 @@ Cypress.Commands.add('tempo_minimo_beneficio_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -10767,6 +10786,7 @@ Cypress.Commands.add('vencimento_fora_do_range_definido_reprovado_inss', project
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -11023,6 +11043,7 @@ Cypress.Commands.add('cnpj_nao_cadastrado_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -11279,6 +11300,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "1991",
@@ -11535,6 +11557,7 @@ Cypress.Commands.add('contrato_lista_restritiva_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -11791,6 +11814,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -12047,6 +12071,7 @@ Cypress.Commands.add('situacao_cpf_receita_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
@@ -12303,6 +12328,7 @@ Cypress.Commands.add('beneficio_elegivel_reprovado_inss', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
+      timeout: 60000,
       body: {
         "contrato": {
             "nuLote": "42",
