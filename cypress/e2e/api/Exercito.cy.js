@@ -223,7 +223,7 @@ describe('Situacao CPF Receita: Diferente de Regular; REPROVADO', () => {
 
 describe('Categoria; REPROVADO', () => {
   it('successfully', () => {
-    cy.codigo_upag_reprovado_exercito()
+    cy.categoria_reprovado_exercito()
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === "Categoria;");
