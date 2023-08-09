@@ -2,7 +2,7 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://byxhub-staging.laratech.com.br',
+    baseUrl: 'https://hub-staging.byx.capital/',
     env: {
       hideCredentials: true,
       requestMode: true,
