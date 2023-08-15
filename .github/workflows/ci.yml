@@ -14,10 +14,10 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           spec: |
-            cypress/e2e/api/FGTS.cy.js
-            cypress/e2e/api/INSS.cy.js
-            cypress/e2e/api/CartaoBeneficio_RepresentanteLegal.cy.js
-            cypress/e2e/api/INSS_RepresentanteLegal.cy.js
-            cypress/e2e/api/SIAPE.cy.js
-            cypress/e2e/api/Exercito.cy.js
-            cypress/e2e/api/Marinha.cy.js
+            cypress/e2e/api/analise_contrato/FGTS.cy.js
+            cypress/e2e/api/analise_contrato/INSS.cy.js
+            cypress/e2e/api/analise_contrato/CartaoBeneficio_RepresentanteLegal.cy.js
+            cypress/e2e/api/analise_contrato/INSS_RepresentanteLegal.cy.js
+            cypress/e2e/api/analise_contrato/SIAPE.cy.js
+            cypress/e2e/api/analise_contrato/Exercito.cy.js
+            cypress/e2e/api/analise_contrato/Marinha.cy.js
