@@ -19990,7 +19990,7 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": faker.random.numeric(12),
+            "nuContratoFacta": "{{nuContratoFacta}}",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -20103,7 +20103,7 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
         "parcela": [
             {
                 "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
+                "dtVencimento": "2023-12-07",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
@@ -20112,70 +20112,70 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
             },
             {
                 "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
+                "dtVencimento": "2024-01-07",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
                 "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
+                "dtPagamento": "2024-01-07"
             },
             {
                 "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
+                "dtVencimento": "2024-02-07",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
                 "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
+                "dtPagamento": "2024-02-07"
             },
             {
                 "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
+                "dtVencimento": "2024-03-07",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
                 "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
+                "dtPagamento": "2024-03-07"
             },
             {
                 "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
+                "dtVencimento": "2024-04-07",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
                 "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
+                "dtPagamento": "2024-03-07"
             },
             {
                 "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
+                "dtVencimento": "2024-05-07",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
                 "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
+                "dtPagamento": "2024-03-07"
             },
             {
                 "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
+                "dtVencimento": "2024-06-07",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
                 "vrPago": "44.11",
-                "dtPagamento": "2023-06-07"
+                "dtPagamento": "2024-06-07"
             },
             {
                 "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
+                "dtVencimento": "2024-07-07",
                 "vrParcela": "44.11",
                 "recebido_facta": true,
                 "paga": true,
                 "vrPago": "44.11",
-                "dtPagamento": "2023-07-07"
+                "dtPagamento": "2024-07-07"
             },
             {
                 "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
+                "dtVencimento": "2024-08-07",
                 "vrParcela": "44.11",
                 "recebido_facta": false,
                 "paga": false,
@@ -20184,7 +20184,7 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
             },
             {
                 "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
+                "dtVencimento": "2024-09-07",
                 "vrParcela": "44.11",
                 "recebido_facta": false,
                 "paga": false,
@@ -20193,7 +20193,7 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
             },
             {
                 "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
+                "dtVencimento": "2024-10-07",
                 "vrParcela": "44.11",
                 "recebido_facta": false,
                 "paga": false,
@@ -20202,7 +20202,7 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
             },
             {
                 "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
+                "dtVencimento": "2024-11-07",
                 "vrParcela": "44.11",
                 "recebido_facta": false,
                 "paga": false,
@@ -24589,7 +24589,7 @@ Cypress.Commands.add('contrato_duplicado_reprovado_cartao_beneficio_representant
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "66075660000",
+            "nuContratoFacta": "64104160000",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
