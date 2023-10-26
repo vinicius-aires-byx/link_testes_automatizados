@@ -1,11 +1,12 @@
 //-------------------------------------------------LOGIN-------------------------------------------------
 Cypress.Commands.add('login', () => {
-      cy.visit('/admin/login/')
+    cy.visit('/admin/login/')
   
-      cy.get("#id_username").type(Cypress.env('user_name'))
-      cy.get("#id_password").type(Cypress.env('user_password'), {log: false })
-      cy.get('.submit-row > input').click()
-  })
+    cy.get("#id_username").type(Cypress.env('user_name'))
+    cy.get("#id_password").type(Cypress.env('user_password'), {log: false })
+    cy.get('.submit-row > input').click()
+
+})
 
 Cypress.Commands.add('logout', () => {
     cy.get('button').click()
@@ -202,3 +203,4 @@ Cypress.Commands.add('inserirPatenteAceita', () => {
     cy.get('#id_patente').type(Cypress.env('nome_patente'))
     cy.get('.default').click()
 })
+
