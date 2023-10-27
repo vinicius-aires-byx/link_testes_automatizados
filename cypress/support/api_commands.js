@@ -19990,7 +19990,7 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "{{nuContratoFacta}}",
+            "nuContratoFacta": faker.random.numeric(12),
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
