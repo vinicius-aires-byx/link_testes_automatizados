@@ -4,7 +4,7 @@ describe('Inserir Banco Permitido', () => {
   })
 
   it('successfully', () => {
-    
+
     cy.inserirBancoPermitido()
     cy.get('.messagelist > .success').should('be.visible')
     cy.deletar()

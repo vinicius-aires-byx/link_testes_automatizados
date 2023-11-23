@@ -4,7 +4,7 @@ describe('Inserir Regra', () => {
   })
 
   it('successfully', () => {
-    
+
     cy.inserirRegra()
     cy.get('.messagelist > .success').should('be.visible')
     cy.deletarRegra()

@@ -22869,7 +22869,7 @@ Cypress.Commands.add('limite_minimo_idade_representante_legal_reprovado_cartao_b
         },
         "representante": {
             "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "2005-11-22",
+            "dtNascimento": "2010-11-22",
             "nmMae": "RAAIMUNDA NONATA SILVA",
             "nmPai": "NAO CONSTA NO DOCUMENTO",
             "nmSexo": "F",
