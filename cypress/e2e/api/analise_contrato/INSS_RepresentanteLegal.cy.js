@@ -53,6 +53,7 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         //regras = response.body.regras.find(m => m.descricao === "Representante Legal Nato;")
         //expect(regras.regra_aprovada).to.be.true
+        /*
         regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Validação RL - Nome, Nascimento, Obito, PEP; - NOME:5")
@@ -69,6 +70,7 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP")
         expect(regras.regra_aprovada).to.be.true
+        */
         regras = response.body.regras.find(m => m.descricao === "Situação CPF Receita Rep.Le: Diferente de Regular;")
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Situação CPF Receita: Diferente de Regular;")

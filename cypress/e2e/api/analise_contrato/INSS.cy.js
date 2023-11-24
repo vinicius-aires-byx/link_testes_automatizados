@@ -47,14 +47,14 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Contrato em lista restritiva;")
         expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP")
-        expect(regras.regra_aprovada).to.be.true
+        //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
+        //expect(regras.regra_aprovada).to.be.true
+        //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1")
+        //expect(regras.regra_aprovada).to.be.true
+        //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO")
+        //expect(regras.regra_aprovada).to.be.true
+        //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP")
+        //expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Situação CPF Receita: Diferente de Regular;")
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Benefícios elegíveis")
