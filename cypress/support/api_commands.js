@@ -4904,7 +4904,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_fgts', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": faker.random.numeric(12),
+                "nuContratoFacta": "35194050001",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -11818,7 +11818,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_inss', project => {
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": faker.random.numeric(12),
+            "nuContratoFacta": "35194050001",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -18964,7 +18964,7 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_inss_repres
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": faker.random.numeric(12),
+            "nuContratoFacta": "35194050001",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -19220,7 +19220,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_inss_representante_legal', proj
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": faker.random.numeric(12),
+            "nuContratoFacta": "35194050001",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -25101,7 +25101,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_cartao_beneficio_representante_
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": faker.random.numeric(12),
+            "nuContratoFacta": "35194050001",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -25613,7 +25613,7 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_cartao_bene
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": faker.random.numeric(12),
+            "nuContratoFacta": "35194050001",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -26127,7 +26127,7 @@ Cypress.Commands.add('analise_com_sucesso_siape', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": faker.random.numeric(12),
+                "nuContratoFacta": "35194050001",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -29915,7 +29915,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_siape', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": faker.random.numeric(12),
+                "nuContratoFacta": "35194050001",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -30945,7 +30945,7 @@ Cypress.Commands.add('analise_com_sucesso_exercito', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": faker.random.numeric(12),
+                "nuContratoFacta": "35194050001",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -34734,7 +34734,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_exercito', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": faker.random.numeric(12),
+                "nuContratoFacta": "35194050001",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -35507,7 +35507,7 @@ Cypress.Commands.add('analise_com_sucesso_marinha', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": faker.random.numeric(12),
+                "nuContratoFacta": "35194050001",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -39041,7 +39041,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_marinha', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": faker.random.numeric(12),
+                "nuContratoFacta": "35194050001",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
