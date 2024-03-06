@@ -7,255 +7,204 @@ Cypress.Commands.add('analise_com_sucesso_fgts', project => {
         url: `/analise-contrato/`,
         timeout: 60000,
         body: {
-                "contrato": {
-                    "nuLote": "42",
-                    "nuContratoFacta": "35194050001",
-                    "cdContratoTipo": "1",
-                    "nuCnpjCorrespondente": "01360251000140",
-                    "dtDigitacao": "2022-10-04",
-                    "dtContrato": "2022-09-15",
-                    "dtPrimeiroVencimento": "2022-12-07",
-                    "nuCpfAgenteValidador": "01217961160",
-                    "qtParcelasAberto": "6",
-                    "qtParcelasPagas": "6",
-                    "qtParcelasVencer": "11",
-                    "qtParcelasAverbadas": "12",
-                    "qtParcelasTotal": "12",
-                    "txCETAno": "0.5246999",
-                    "txCETMes": "0.0312910",
-                    "txEfetivaAno": "0.4357594",
-                    "txEfetivaMes": "0.0180000",
-                    "vrAberto": "3705.24",
-                    "vrContrato": "1166.51",
-                    "vrIof": "38.41",
+            "contrato": {
+                "nuLote": "42",
+                "nuContratoFacta": "35194050001",
+                "cdContratoTipo": "1",
+                "nuCnpjCorrespondente": "01360251000140",
+                "dtDigitacao": "2022-10-04",
+                "dtContrato": "2022-09-15",
+                "dtPrimeiroVencimento": "2022-12-07",
+                "nuCpfAgenteValidador": "01217961160",
+                "qtParcelasAberto": "6",
+                "qtParcelasPagas": "6",
+                "qtParcelasVencer": "11",
+                "qtParcelasAverbadas": "12",
+                "qtParcelasTotal": "12",
+                "txCETAno": "0.5246999",
+                "txCETMes": "0.0312910",
+                "txEfetivaAno": "0.4357594",
+                "txEfetivaMes": "0.0180000",
+                "vrAberto": "3705.24",
+                "vrContrato": "1166.51",
+                "vrIof": "38.41",
+                "vrParcela": "44.11",
+                "vrVencer": "3705.24",
+                "vrLiberadoCliente": "1166.51",
+                "vrTAC": "0.0",
+                "vrSeguro": "0.0",
+                "nuContratoCCB": "54568972",
+                "recusado": "false",
+                "docsValidados": "false",
+                "tipoProduto": 1,
+                "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+                "status": 1
+            },
+            "cliente": {
+              "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
+              "dtNascimento":"2002-09-30",
+              "nmMae":"MARGARIDA ROSA DE JESUS",
+              "nmPai":"ADELINO SOARES DE OLIVEIRA",
+              "nmSexo":"F",
+              "dsEstadoCivil":"NAO DEFINIDO",
+              "nmEmail":"",
+              "nuRG":"5272424",
+              "nuCpf":"26223390033",
+              "dtEmissaoRg":"2010-10-10",
+              "nmOrgaoEmissorRg":"SSP",
+              "nmUfOrgaoEmissorRg":"MG",
+              "dsNaturalidade":"LAGOA SANTA",
+              "nmEnderecoResidencialTipo":1,
+              "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
+              "nmEnderecoResidencialNumero":"361",
+              "nmEnderecoResidencialComplemento":null,
+              "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
+              "nmEnderecoResidencialCidade":"LAGOA SANTA",
+              "nmEnderecoResidencialUf":"MG",
+              "nuEnderecoResidencialCep":"33400000",
+              "nuDddTelefoneCelular":31993650728,
+              "nuDddTelefoneResidencial":1,
+              "vrRenda":"1220.00",
+              "nuCNH":"",
+              "tempoResidencia":"0",
+              "tipoLogradouro":"None",
+              "dsNacionalidade":"BRASILEIRA",
+              "vrPatrimonio":"10000.00",
+              "escolaridade":"1",
+              "empresa":{
+                 "empresa":"INSS",
+                 "profissao":"PROFISSAO NAO DEFINIDA",
+                 "dtAdmissao":"2023-03-15",
+                 "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
+                 "tipoProfissao":"APOSENTADO PRIVADO",
+                 "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
+                 "tipoProfissaoOr":"APOSENTADO PRIVADO"
+              }
+            },
+            "parcela": [
+                {
+                    "nuParcela": "1",
+                    "dtVencimento": "2023-12-07",
                     "vrParcela": "44.11",
-                    "vrVencer": "3705.24",
-                    "vrLiberadoCliente": "1166.51",
-                    "vrTAC": "0.0",
-                    "vrSeguro": "0.0",
-                    "nuContratoCCB": "54568972",
-                    "recusado": "false",
-                    "docsValidados": "false",
-                    "tipoProduto": 1
+                    "recebido_facta": true,
+                    "paga": true,
+                    "vrPago": "44.11",
+                    "dtPagamento": "2022-12-07"
                 },
-                "cliente": {
-                  "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-                  "dtNascimento":"1954-09-30",
-                  "nmMae":"MARGARIDA ROSA DE JESUS",
-                  "nmPai":"ADELINO SOARES DE OLIVEIRA",
-                  "nmSexo":"F",
-                  "dsEstadoCivil":"NAO DEFINIDO",
-                  "nmEmail":"",
-                  "nuRG":"5272424",
-                  "nuCpf":"65394003653",
-                  "dtEmissaoRg":"2010-10-10",
-                  "nmOrgaoEmissorRg":"SSP",
-                  "nmUfOrgaoEmissorRg":"MG",
-                  "dsNaturalidade":"LAGOA SANTA",
-                  "nmEnderecoResidencialTipo":1,
-                  "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-                  "nmEnderecoResidencialNumero":"361",
-                  "nmEnderecoResidencialComplemento":null,
-                  "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-                  "nmEnderecoResidencialCidade":"LAGOA SANTA",
-                  "nmEnderecoResidencialUf":"MG",
-                  "nuEnderecoResidencialCep":"33400000",
-                  "nuDddTelefoneCelular":31993650728,
-                  "nuDddTelefoneResidencial":1,
-                  "vrRenda":"1220.00",
-                  "nuCNH":"",
-                  "tempoResidencia":"0",
-                  "tipoLogradouro":"None",
-                  "dsNacionalidade":"BRASILEIRA",
-                  "vrPatrimonio":"10000.00",
-                  "escolaridade":"1",
-                  "empresa":{
-                     "empresa":"INSS",
-                     "profissao":"PROFISSAO NAO DEFINIDA",
-                     "dtAdmissao":"2023-03-15",
-                     "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-                     "tipoProfissao":"APOSENTADO PRIVADO",
-                     "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-                     "tipoProfissaoOr":"APOSENTADO PRIVADO"
-                  }
+                {
+                    "nuParcela": "2",
+                    "dtVencimento": "2024-01-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": true,
+                    "paga": true,
+                    "vrPago": "44.11",
+                    "dtPagamento": "2024-01-07"
                 },
-                "representante": {
-                    "nmCliente": "ANGELICA PINTO MAIA",
-                    "dtNascimento": "1985-11-22",
-                    "nmMae": "RAAIMUNDA NONATA SILVA",
-                    "nmPai": "NAO CONSTA NO DOCUMENTO",
-                    "nmSexo": "F",
-                    "dsEstadoCivil": "OUTROS",
-                    "nmEmail": "",
-                    "nuCpf": "02806073254",
-                    "dtEmissaoRg": "2018-09-19",
-                    "nmOrgaoEmissorRg": "SSP",
-                    "nmUfOrgaoEmissorRg": "AC",
-                    "dsNaturalidade": "ACRELANDIA",
-                    "nmEnderecoResidencialTipo": "1",
-                    "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                    "nmEnderecoResidencialNumero": "41",
-                    "nmEnderecoResidencialComplento": "None",
-                    "nmEnderecoResidencialBairro": "JUREICO",
-                    "nmEnderecoResidencialCidade": "ACRELANDIA",
-                    "nmEnderecoResidencialUf": "MA",
-                    "nuEnderecoResidencialCep": "65200000",
-                    "nuDddTelefoneCelular": "098984645210",
-                    "nuDddTelefoneResidencial": "1",
-                    "vrRenda": "1212.0",
-                    "tempoResidencia": "0",
-                    "tipoLogradouro": "",
-                    "nacionalidade": "BRASILEIRA",
-                    "vrPatrimonio": "10000.0",
-                    "escolaridade": "1",
-                    "nuRG": "0207870320028"
+                {
+                    "nuParcela": "3",
+                    "dtVencimento": "2024-02-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": true,
+                    "paga": true,
+                    "vrPago": "44.11",
+                    "dtPagamento": "2024-02-07"
                 },
-                "beneficio": {
-                    "matricula": "7042811594",
-                    "ufBeneficio": "AC",
-                    "tipoBeneficio": "87",
-                    "vrBeneficio": "1212.0",
-                    "dtConcessaoBeneficio": "2019-01-02",
-                    "dia_util_pagamento": "",
-                    "dia_util_forma_pagamento": ""
+                {
+                    "nuParcela": "4",
+                    "dtVencimento": "2024-03-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": true,
+                    "paga": true,
+                    "vrPago": "44.11",
+                    "dtPagamento": "2024-03-07"
                 },
-                "parcela": [
-                    {
-                        "nuParcela": "1",
-                        "dtVencimento": "2022-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": true,
-                        "paga": true,
-                        "vrPago": "44.11",
-                        "dtPagamento": "2022-12-07"
-                    },
-                    {
-                        "nuParcela": "2",
-                        "dtVencimento": "2023-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": true,
-                        "paga": true,
-                        "vrPago": "44.11",
-                        "dtPagamento": "2024-12-07"
-                    },
-                    {
-                        "nuParcela": "3",
-                        "dtVencimento": "2024-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": true,
-                        "paga": true,
-                        "vrPago": "44.11",
-                        "dtPagamento": "2024-12-07"
-                    },
-                    {
-                        "nuParcela": "4",
-                        "dtVencimento": "2025-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": true,
-                        "paga": true,
-                        "vrPago": "44.11",
-                        "dtPagamento": "2025-12-07"
-                    },
-                    {
-                        "nuParcela": "5",
-                        "dtVencimento": "2026-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": true,
-                        "paga": true,
-                        "vrPago": "44.11",
-                        "dtPagamento": "2026-12-07"
-                    },
-                    {
-                        "nuParcela": "6",
-                        "dtVencimento": "2027-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": true,
-                        "paga": true,
-                        "vrPago": "44.11",
-                        "dtPagamento": "2027-12-07"
-                    },
-                    {
-                        "nuParcela": "7",
-                        "dtVencimento": "2028-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": false,
-                        "paga": false,
-                        "vrPago": "",
-                        "dtPagamento": ""
-                    },
-                    {
-                        "nuParcela": "8",
-                        "dtVencimento": "2029-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": false,
-                        "paga": false,
-                        "vrPago": "",
-                        "dtPagamento": ""
-                    },
-                    {
-                        "nuParcela": "9",
-                        "dtVencimento": "2030-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": false,
-                        "paga": false,
-                        "vrPago": "",
-                        "dtPagamento": ""
-                    },
-                    {
-                        "nuParcela": "10",
-                        "dtVencimento": "2031-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": false,
-                        "paga": false,
-                        "vrPago": "",
-                        "dtPagamento": ""
-                    },
-                    {
-                        "nuParcela": "11",
-                        "dtVencimento": "2032-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": false,
-                        "paga": false,
-                        "vrPago": "",
-                        "dtPagamento": ""
-                    },
-                    {
-                        "nuParcela": "12",
-                        "dtVencimento": "2033-12-07",
-                        "vrParcela": "44.11",
-                        "recebido_facta": false,
-                        "paga": false,
-                        "vrPago": "",
-                        "dtPagamento": ""
-                    }
-                ],
-                "contratosOrigem": [
-                    {
-                        "dtContratoOrigem": "0001-01-01",
-                        "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                        "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                        "nuContratoOrigem": "0",
-                        "nuCnpjCorrespondenteOrigem": "0",
-                        "cdInstFinanceiraOrigem": "149",
-                        "vrContratoOrigem": "0.0",
-                        "vrSaldoContratoOrigem": "0.0",
-                        "contrato": ""
-                    }
-                ],
-                "dadosBancariosSacado": {
-                    "cdContaTipo": "1",
-                    "nuBanco": "001",
-                    "nuAgencia": "6044",
-                    "nuConta": "001368184",
-                    "nuContaDigito": "2",
-                    "nuCpfTitular": "61615160396",
-                    "nuCnpjTitular": 1,
-                    "cdCreditoTipo": "1"
+                {
+                    "nuParcela": "5",
+                    "dtVencimento": "2024-04-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": true,
+                    "paga": true,
+                    "vrPago": "44.11",
+                    "dtPagamento": "2024-03-07"
                 },
-                "anexos": [],
-                "operacao": "automacao"
-            
-    }
+                {
+                    "nuParcela": "6",
+                    "dtVencimento": "2024-05-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": true,
+                    "paga": true,
+                    "vrPago": "44.11",
+                    "dtPagamento": "2024-03-07"
+                },
+                {
+                    "nuParcela": "7",
+                    "dtVencimento": "2024-06-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": true,
+                    "paga": true,
+                    "vrPago": "44.11",
+                    "dtPagamento": "2024-06-07"
+                },
+                {
+                    "nuParcela": "8",
+                    "dtVencimento": "2024-07-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": true,
+                    "paga": true,
+                    "vrPago": "44.11",
+                    "dtPagamento": "2024-07-07"
+                },
+                {
+                    "nuParcela": "9",
+                    "dtVencimento": "2024-08-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": false,
+                    "paga": false,
+                    "vrPago": "",
+                    "dtPagamento": ""
+                },
+                {
+                    "nuParcela": "10",
+                    "dtVencimento": "2024-09-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": false,
+                    "paga": false,
+                    "vrPago": "",
+                    "dtPagamento": ""
+                },
+                {
+                    "nuParcela": "11",
+                    "dtVencimento": "2024-10-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": false,
+                    "paga": false,
+                    "vrPago": "",
+                    "dtPagamento": ""
+                },
+                {
+                    "nuParcela": "12",
+                    "dtVencimento": "2024-11-07",
+                    "vrParcela": "44.11",
+                    "recebido_facta": false,
+                    "paga": false,
+                    "vrPago": "",
+                    "dtPagamento": ""
+                }
+            ],
+            "dadosBancariosSacado": {
+                "cdContaTipo": "1",
+                "nuBanco": "001",
+                "nuAgencia": "6044",
+                "nuConta": "001368184",
+                "nuContaDigito": "2",
+                "nuCpfTitular": "61615160396",
+                "nuCnpjTitular": 1,
+                "cdCreditoTipo": "1"
+            },
+            "anexos": [],
+            "operacao": "automacao",
+            "urlAmbiente": "https://cessao-staging1.byx.capital"
+        }
     })
 })
 
@@ -2095,7 +2044,7 @@ Cypress.Commands.add('blacklist_cpf_reprovado_fgts', project => {
                 "dsEstadoCivil": "OUTROS",
                 "nmEmail": "",
                 "nuRG": "0501792520132",
-                "nuCpf": "53582969800",
+                "nuCpf": "65394003653",
                 "dtEmissaoRg": "2016-10-25",
                 "nmOrgaoEmissorRg": "SSP",
                 "nmUfOrgaoEmissorRg": "AC",
@@ -4885,531 +4834,6 @@ Cypress.Commands.add('limite_maximo_parcelas_reprovado_fgts', project => {
     })
 })
 
-/*
-Cypress.Commands.add('garantia_cef_reprovado_fgts', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        timeout: 60000,
-        body: 
-    })
-})
-*/
-
-Cypress.Commands.add('validacao_bureau_reprovado_fgts', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        timeout: 60000,
-        body: {
-            "contrato": {
-                "nuLote": "42",
-                "nuContratoFacta": "35194050001",
-                "cdContratoTipo": "1",
-                "nuCnpjCorrespondente": "01360251000140",
-                "dtDigitacao": "2022-10-04",
-                "dtContrato": "2022-09-15",
-                "dtPrimeiroVencimento": "2022-12-07",
-                "nuCpfAgenteValidador": "01217961160",
-                "qtParcelasAberto": "6",
-                "qtParcelasPagas": "6",
-                "qtParcelasVencer": "11",
-                "qtParcelasAverbadas": "12",
-                "qtParcelasTotal": "12",
-                "txCETAno": "0.5246999",
-                "txCETMes": "0.0312910",
-                "txEfetivaAno": "0.4357594",
-                "txEfetivaMes": "0.0180000",
-                "vrAberto": "3705.24",
-                "vrContrato": "1166.51",
-                "vrIof": "38.41",
-                "vrParcela": "44.11",
-                "vrVencer": "3705.24",
-                "vrLiberadoCliente": "1166.51",
-                "vrTAC": "0.0",
-                "vrSeguro": "0.0",
-                "nuContratoCCB": "54568972",
-                "recusado": "false",
-                "docsValidados": "false",
-                "tipoProduto": 1
-            },
-            "cliente": {
-                "nmCliente": "josé guilherme silva cardoso",
-                "dtNascimento": "2009-08-09",
-                "nmMae": "SIMONE DO ROSARIO SILVA",
-                "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
-                "nmSexo": "M",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuRG": "0501792520132",
-                "nuCpf": "61615160396",
-                "dtEmissaoRg": "2016-10-25",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "PINHEIRO",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
-                "nmEnderecoResidencialCidade": "Porto Alegre",
-                "nmEnderecoResidencialUf": "RS",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "nuCNH": "",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "None",
-                "dsNacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "empresa": {
-                    "empresa": "INSS 29979036000140",
-                    "profissao": " PROFISSAO NAO DEFINIDA",
-                    "dtAdmissao": "2022-12-02",
-                    "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
-                    "tipoProfissao": "PENSIONISTA",
-                    "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
-                    "tipoProfissaoOr": "PENSIONISTA"
-                }
-            },
-            "representante": {
-                "nmCliente": "ANGELICA PINTO MAIA",
-                "dtNascimento": "1985-11-22",
-                "nmMae": "RAAIMUNDA NONATA SILVA",
-                "nmPai": "NAO CONSTA NO DOCUMENTO",
-                "nmSexo": "F",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuCpf": "02806073254",
-                "dtEmissaoRg": "2018-09-19",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "ACRELANDIA",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "JUREICO",
-                "nmEnderecoResidencialCidade": "ACRELANDIA",
-                "nmEnderecoResidencialUf": "MA",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "",
-                "nacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "nuRG": "0207870320028"
-            },
-            "beneficio": {
-                "matricula": "7042811594",
-                "ufBeneficio": "AC",
-                "tipoBeneficio": "87",
-                "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
-                "dia_util_pagamento": "",
-                "dia_util_forma_pagamento": ""
-            },
-            "parcela": [
-                {
-                    "nuParcela": "1",
-                    "dtVencimento": "2023-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-12-07"
-                },
-                {
-                    "nuParcela": "2",
-                    "dtVencimento": "2024-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2024-12-07"
-                },
-                {
-                    "nuParcela": "3",
-                    "dtVencimento": "2025-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2025-12-07"
-                },
-                {
-                    "nuParcela": "4",
-                    "dtVencimento": "2026-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2026-12-07"
-                },
-                {
-                    "nuParcela": "5",
-                    "dtVencimento": "2027-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2027-12-07"
-                },
-                {
-                    "nuParcela": "6",
-                    "dtVencimento": "2028-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2028-12-07"
-                },
-                {
-                    "nuParcela": "7",
-                    "dtVencimento": "2029-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "8",
-                    "dtVencimento": "2030-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "9",
-                    "dtVencimento": "2031-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "10",
-                    "dtVencimento": "2032-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "11",
-                    "dtVencimento": "2033-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "12",
-                    "dtVencimento": "2034-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                }
-            ],
-            "contratosOrigem": [
-                {
-                    "dtContratoOrigem": "0001-01-01",
-                    "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                    "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                    "nuContratoOrigem": "0",
-                    "nuCnpjCorrespondenteOrigem": "0",
-                    "cdInstFinanceiraOrigem": "149",
-                    "vrContratoOrigem": "0.0",
-                    "vrSaldoContratoOrigem": "0.0",
-                    "contrato": ""
-                }
-            ],
-            "dadosBancariosSacado": {
-                "cdContaTipo": "1",
-                "nuBanco": "001",
-                "nuAgencia": "6044",
-                "nuConta": "001368184",
-                "nuContaDigito": "2",
-                "nuCpfTitular": "61615160396",
-                "nuCnpjTitular": 1,
-                "cdCreditoTipo": "1"
-            },
-            "anexos": [],
-            "operacao": "automacao"
-        }
-    })
-})
-
-Cypress.Commands.add('situacao_cpf_receita_reprovado_fgts', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        timeout: 60000,
-        body: {
-            "contrato": {
-                "nuLote": "42",
-                "nuContratoFacta": "9876543243210",
-                "cdContratoTipo": "1",
-                "nuCnpjCorrespondente": "01360251000140",
-                "dtDigitacao": "2022-10-04",
-                "dtContrato": "2022-09-15",
-                "dtPrimeiroVencimento": "2022-12-07",
-                "nuCpfAgenteValidador": "01217961160",
-                "qtParcelasAberto": "6",
-                "qtParcelasPagas": "6",
-                "qtParcelasVencer": "11",
-                "qtParcelasAverbadas": "12",
-                "qtParcelasTotal": "12",
-                "txCETAno": "0.5246999",
-                "txCETMes": "0.0312910",
-                "txEfetivaAno": "0.4357594",
-                "txEfetivaMes": "0.0213000",
-                "vrAberto": "3705.24",
-                "vrContrato": "1166.51",
-                "vrIof": "38.41",
-                "vrParcela": "44.11",
-                "vrVencer": "3705.24",
-                "vrLiberadoCliente": "1166.51",
-                "vrTAC": "0.0",
-                "vrSeguro": "0.0",
-                "nuContratoCCB": "54568972",
-                "recusado": "false",
-                "docsValidados": "false",
-                "tipoProduto": 1
-            },
-            "cliente":{
-              "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-              "dtNascimento":"1954-09-30",
-              "nmMae":"MARGARIDA ROSA DE JESUS",
-              "nmPai":"ADELINO SOARES DE OLIVEIRA",
-              "nmSexo":"F",
-              "dsEstadoCivil":"NAO DEFINIDO",
-              "nmEmail":"",
-              "nuRG":"5272424",
-              "nuCpf":"61615160396",
-              "dtEmissaoRg":"2010-10-10",
-              "nmOrgaoEmissorRg":"SSP",
-              "nmUfOrgaoEmissorRg":"MG",
-              "dsNaturalidade":"LAGOA SANTA",
-              "nmEnderecoResidencialTipo":1,
-              "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-              "nmEnderecoResidencialNumero":"361",
-              "nmEnderecoResidencialComplemento":null,
-              "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-              "nmEnderecoResidencialCidade":"LAGOA SANTA",
-              "nmEnderecoResidencialUf":"MG",
-              "nuEnderecoResidencialCep":"33400000",
-              "nuDddTelefoneCelular":31993650728,
-              "nuDddTelefoneResidencial":1,
-              "vrRenda":"1220.00",
-              "nuCNH":"",
-              "tempoResidencia":"0",
-              "tipoLogradouro":"None",
-              "dsNacionalidade":"BRASILEIRA",
-              "vrPatrimonio":"10000.00",
-              "escolaridade":"1",
-              "empresa":{
-                 "empresa":"INSS",
-                 "profissao":"PROFISSAO NAO DEFINIDA",
-                 "dtAdmissao":"2023-03-15",
-                 "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-                 "tipoProfissao":"APOSENTADO PRIVADO",
-                 "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-                 "tipoProfissaoOr":"APOSENTADO PRIVADO"
-              }
-           },
-            "representante": {
-                "nmCliente": "ANGELICA PINTO MAIA",
-                "dtNascimento": "1945-11-22",
-                "nmMae": "RAAIMUNDA NONATA SILVA",
-                "nmPai": "NAO CONSTA NO DOCUMENTO",
-                "nmSexo": "F",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuCpf": "02806073254",
-                "dtEmissaoRg": "2018-09-19",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "ACRELANDIA",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "JUREICO",
-                "nmEnderecoResidencialCidade": "ACRELANDIA",
-                "nmEnderecoResidencialUf": "MA",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "",
-                "nacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "nuRG": "0207870320028"
-            },
-            "beneficio": {
-                "matricula": "7042811594",
-                "ufBeneficio": "AC",
-                "tipoBeneficio": "87",
-                "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
-                "dia_util_pagamento": "",
-                "dia_util_forma_pagamento": ""
-            },
-            "parcela": [
-                {
-                    "nuParcela": "1",
-                    "dtVencimento": "2022-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2022-12-07"
-                },
-                {
-                    "nuParcela": "2",
-                    "dtVencimento": "2023-01-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-01-07"
-                },
-                {
-                    "nuParcela": "3",
-                    "dtVencimento": "2023-02-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-02-07"
-                },
-                {
-                    "nuParcela": "4",
-                    "dtVencimento": "2023-03-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "5",
-                    "dtVencimento": "2023-04-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "6",
-                    "dtVencimento": "2023-05-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "7",
-                    "dtVencimento": "2023-06-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "8",
-                    "dtVencimento": "2023-07-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "9",
-                    "dtVencimento": "2023-08-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "10",
-                    "dtVencimento": "2023-09-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "11",
-                    "dtVencimento": "2023-10-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "12",
-                    "dtVencimento": "2023-11-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                }
-            ],
-            "contratosOrigem": [
-                {
-                    "dtContratoOrigem": "0001-01-01",
-                    "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                    "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                    "nuContratoOrigem": "0",
-                    "nuCnpjCorrespondenteOrigem": "0",
-                    "cdInstFinanceiraOrigem": "149",
-                    "vrContratoOrigem": "0.0",
-                    "vrSaldoContratoOrigem": "0.0",
-                    "contrato": ""
-                }
-            ],
-            "dadosBancariosSacado": {
-                "cdContaTipo": "1",
-                "nuBanco": "001",
-                "nuAgencia": "6044",
-                "nuConta": "001368184",
-                "nuContaDigito": "2",
-                "nuCpfTitular": "61615160396",
-                "nuCnpjTitular": 1,
-                "cdCreditoTipo": "1"
-            },
-            "anexos": [],
-            "operacao": "automacao"
-        }
-    })
-})
-
 Cypress.Commands.add('contrato_duplicado_reprovado_fgts', project => {
     cy.request({
         method: 'POST',
@@ -5934,11 +5358,12 @@ Cypress.Commands.add('analise_com_sucesso_inss', project => {
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "35194050001",
+            "nuContratoFacta": "3143212131",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
+            "dtDigitacao": "2022-09-14",
+            "dtRetornoAverbacao": "2022-09-14",
+            "dtContrato": "2023-08-25",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
             "qtParcelasAberto": "6",
@@ -5952,16 +5377,18 @@ Cypress.Commands.add('analise_com_sucesso_inss', project => {
             "txEfetivaMes": "0.0190000",
             "vrAberto": "3705.24",
             "vrContrato": "1166.51",
-            "vrIof": "38.41",
+            "vrIof": "0.0",
             "vrParcela": "44.11",
             "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
+            "vrLiberadoCliente": "0.0",
+            "vrTAC": "1.0",
+            "vrSeguro": "1.0",
             "nuContratoCCB": "54568972",
             "recusado": "false",
             "docsValidados": "false",
-            "tipoProduto": 6
+            "tipoProduto": 6,
+            "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+            "status": 1
         },
         "cliente": {
             "nmCliente": "TEREZINHA MARIA DE JESUS GONCALVES",
@@ -5972,7 +5399,7 @@ Cypress.Commands.add('analise_com_sucesso_inss', project => {
             "dsEstadoCivil": "NAO DEFINIDO",
             "nmEmail": "",
             "nuRG": "5272424",
-            "nuCpf": "65394003653",
+            "nuCpf": "70828658055",
             "dtEmissaoRg": "2010-10-10",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "MG",
@@ -6012,7 +5439,7 @@ Cypress.Commands.add('analise_com_sucesso_inss', project => {
             "nmSexo": "F",
             "dsEstadoCivil": "OUTROS",
             "nmEmail": "",
-            "nuCpf": "02804648354",
+            "nuCpf": "65394003653",
             "dtEmissaoRg": "2018-09-19",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "MA",
@@ -6163,7 +5590,7 @@ Cypress.Commands.add('analise_com_sucesso_inss', project => {
                 "nuCnpjCorrespondenteOrigem": "0",
                 "cdInstFinanceiraOrigem": "149",
                 "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
+                "vrSaldoContratoOrigem": "0.1",/////////////////
                 "contrato": ""
             }
         ],
@@ -6178,7 +5605,8 @@ Cypress.Commands.add('analise_com_sucesso_inss', project => {
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "automacao"
+        "operacao": "automacao",
+        "urlAmbiente": "https://cessao-staging1.byx.capital"
     }
     })
 })
@@ -8019,7 +7447,7 @@ Cypress.Commands.add('blacklist_cpf_reprovado_inss', project => {
             "dsEstadoCivil": "OUTROS",
             "nmEmail": "",
             "nuRG": "0501792520132",
-            "nuCpf": "53582969800",
+            "nuCpf": "65394003653",
             "dtEmissaoRg": "2016-10-25",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "AC",
@@ -10639,7 +10067,7 @@ Cypress.Commands.add('tempo_minimo_beneficio_reprovado_inss', project => {
             "ufBeneficio": "AC",
             "tipoBeneficio": "87",
             "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2023-01-02",
+            "dtConcessaoBeneficio": "2024-03-05",
             "dia_util_pagamento": "",
             "dia_util_forma_pagamento": ""
         },
@@ -11810,520 +11238,6 @@ Cypress.Commands.add('contrato_lista_restritiva_reprovado_inss', project => {
     })
 })
 
-Cypress.Commands.add('validacao_bureau_reprovado_inss', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      timeout: 60000,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "35194050001",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "6",
-            "qtParcelasPagas": "6",
-            "qtParcelasVencer": "4",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 6
-        },
-        "cliente": {
-            "nmCliente": "josé guilherme silva cardoso",
-            "dtNascimento": "2000-08-09",
-            "nmMae": "SIMONE DO ROSARIO SILVA",
-            "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
-            "nmSexo": "M",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuRG": "0501792520132",
-            "nuCpf": "61615160396",
-            "dtEmissaoRg": "2016-10-25",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "PINHEIRO",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
-            "nmEnderecoResidencialCidade": "Porto Alegre",
-            "nmEnderecoResidencialUf": "RS",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "nuCNH": "",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "None",
-            "dsNacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "empresa": {
-                "empresa": "INSS 29979036000140",
-                "profissao": " PROFISSAO NAO DEFINIDA",
-                "dtAdmissao": "2022-12-02",
-                "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
-                "tipoProfissao": "PENSIONISTA",
-                "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
-                "tipoProfissaoOr": "PENSIONISTA"
-            }
-        },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "02806073254",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "automacao"
-    }
-    })
-})
-
-Cypress.Commands.add('situacao_cpf_receita_reprovado_inss', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      timeout: 60000,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "9876543243210",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "6",
-            "qtParcelasPagas": "6",
-            "qtParcelasVencer": "4",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 6
-        },
-        "cliente":{
-          "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-          "dtNascimento":"1954-09-30",
-          "nmMae":"MARGARIDA ROSA DE JESUS",
-          "nmPai":"ADELINO SOARES DE OLIVEIRA",
-          "nmSexo":"F",
-          "dsEstadoCivil":"NAO DEFINIDO",
-          "nmEmail":"",
-          "nuRG":"5272424",
-          "nuCpf":"61615160396",
-          "dtEmissaoRg":"2010-10-10",
-          "nmOrgaoEmissorRg":"SSP",
-          "nmUfOrgaoEmissorRg":"MG",
-          "dsNaturalidade":"LAGOA SANTA",
-          "nmEnderecoResidencialTipo":1,
-          "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-          "nmEnderecoResidencialNumero":"361",
-          "nmEnderecoResidencialComplemento":null,
-          "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-          "nmEnderecoResidencialCidade":"LAGOA SANTA",
-          "nmEnderecoResidencialUf":"MG",
-          "nuEnderecoResidencialCep":"33400000",
-          "nuDddTelefoneCelular":31993650728,
-          "nuDddTelefoneResidencial":1,
-          "vrRenda":"1220.00",
-          "nuCNH":"",
-          "tempoResidencia":"0",
-          "tipoLogradouro":"None",
-          "dsNacionalidade":"BRASILEIRA",
-          "vrPatrimonio":"10000.00",
-          "escolaridade":"1",
-          "empresa":{
-             "empresa":"INSS",
-             "profissao":"PROFISSAO NAO DEFINIDA",
-             "dtAdmissao":"2023-03-15",
-             "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissao":"APOSENTADO PRIVADO",
-             "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissaoOr":"APOSENTADO PRIVADO"
-          }
-       },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "02806073254",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "automacao"
-    }
-    })
-})
-
 Cypress.Commands.add('beneficio_elegivel_reprovado_inss', project => {
     cy.request({
       method: 'POST',
@@ -12591,7 +11505,7 @@ Cypress.Commands.add('analise_com_sucesso_inss_representante_legal', project => 
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "35194050001",
+            "nuContratoFacta": "3143212131",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -12618,7 +11532,9 @@ Cypress.Commands.add('analise_com_sucesso_inss_representante_legal', project => 
             "nuContratoCCB": "54568972",
             "recusado": "false",
             "docsValidados": "false",
-            "tipoProduto": 2
+            "tipoProduto": 2,
+            "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+            "status": 1
         },
         "cliente":{
           "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
@@ -12662,14 +11578,14 @@ Cypress.Commands.add('analise_com_sucesso_inss_representante_legal', project => 
           }
        },
         "representante": {
-            "nmCliente": "SIMONE DO ROSARIO SILVA",
+            "nmCliente": "MARGARIDA ROSA DE JESUS",
             "dtNascimento": "1985-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
+            "nmMae": "RAIMUNDA NONATA SILVA",
             "nmPai": "NAO CONSTA NO DOCUMENTO",
             "nmSexo": "F",
             "dsEstadoCivil": "OUTROS",
             "nmEmail": "",
-            "nuCpf": "02804648354",
+            "nuCpf": "43727949082",
             "dtEmissaoRg": "2018-09-19",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "MA",
@@ -12835,7 +11751,8 @@ Cypress.Commands.add('analise_com_sucesso_inss_representante_legal', project => 
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "automacao"
+        "operacao": "automacao",
+        "urlAmbiente": "https://cessao-staging1.byx.capital"
     }
     })
 })
@@ -14708,7 +13625,7 @@ Cypress.Commands.add('blacklist_cpf_reprovado_inss_representante_legal', project
             "nmSexo": "F",
             "dsEstadoCivil": "OUTROS",
             "nmEmail": "",
-            "nuCpf": "02806073254",
+            "nuCpf": "65394003653",
             "dtEmissaoRg": "2018-09-19",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "AC",
@@ -17790,7 +16707,7 @@ Cypress.Commands.add('tempo_minimo_beneficio_reprovado_inss_representante_legal'
             "ufBeneficio": "AC",
             "tipoBeneficio": "87",
             "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2023-01-02",
+            "dtConcessaoBeneficio": "2024-03-05",
             "dia_util_pagamento": "",
             "dia_util_forma_pagamento": ""
         },
@@ -18957,14 +17874,14 @@ Cypress.Commands.add('contrato_lista_restritiva_reprovado_inss_representante_leg
     })
 })
 
-Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_inss_representante_legal', project => {
+Cypress.Commands.add('contrato_representante_legal_nato_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "35194050001",
+            "nuContratoFacta": "9876543243211",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -18994,263 +17911,7 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_inss_repres
             "tipoProduto": 2
         },
         "cliente": {
-            "nmCliente": "josé guilherme silva cardoso",
-            "dtNascimento": "2010-08-09",
-            "nmMae": "SIMONE DO ROSARIO SILVA",
-            "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
-            "nmSexo": "M",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuRG": "0501792520132",
-            "nuCpf": "02806073254",
-            "dtEmissaoRg": "2016-10-25",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "PINHEIRO",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
-            "nmEnderecoResidencialCidade": "Porto Alegre",
-            "nmEnderecoResidencialUf": "RS",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "nuCNH": "",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "None",
-            "dsNacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "empresa": {
-                "empresa": "INSS 29979036000140",
-                "profissao": " PROFISSAO NAO DEFINIDA",
-                "dtAdmissao": "2022-12-02",
-                "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
-                "tipoProfissao": "PENSIONISTA",
-                "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
-                "tipoProfissaoOr": "PENSIONISTA"
-            }
-        },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "61615160396",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "automacao"
-    }
-    })
-})
-
-Cypress.Commands.add('validacao_bureau_reprovado_inss_representante_legal', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "35194050001",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "6",
-            "qtParcelasPagas": "6",
-            "qtParcelasVencer": "4",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 2
-        },
-        "cliente": {
-            "nmCliente": "josé guilherme silva cardoso",
+            "nmCliente": "joao guilherme silva cardoso",
             "dtNascimento": "2000-08-09",
             "nmMae": "SIMONE DO ROSARIO SILVA",
             "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
@@ -19291,263 +17952,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_inss_representante_legal', proj
             }
         },
         "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "61615160396",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "automacao"
-    }
-    })
-})
-
-Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_inss_representante_legal', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "9876543243210",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "6",
-            "qtParcelasPagas": "6",
-            "qtParcelasVencer": "4",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 2
-        },
-        "cliente":{
-          "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-          "dtNascimento":"1954-09-30",
-          "nmMae":"MARGARIDA ROSA DE JESUS",
-          "nmPai":"ADELINO SOARES DE OLIVEIRA",
-          "nmSexo":"F",
-          "dsEstadoCivil":"NAO DEFINIDO",
-          "nmEmail":"",
-          "nuRG":"5272424",
-          "nuCpf":"61615160396",
-          "dtEmissaoRg":"2010-10-10",
-          "nmOrgaoEmissorRg":"SSP",
-          "nmUfOrgaoEmissorRg":"MG",
-          "dsNaturalidade":"LAGOA SANTA",
-          "nmEnderecoResidencialTipo":1,
-          "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-          "nmEnderecoResidencialNumero":"361",
-          "nmEnderecoResidencialComplemento":null,
-          "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-          "nmEnderecoResidencialCidade":"LAGOA SANTA",
-          "nmEnderecoResidencialUf":"MG",
-          "nuEnderecoResidencialCep":"33400000",
-          "nuDddTelefoneCelular":31993650728,
-          "nuDddTelefoneResidencial":1,
-          "vrRenda":"1220.00",
-          "nuCNH":"",
-          "tempoResidencia":"0",
-          "tipoLogradouro":"None",
-          "dsNacionalidade":"BRASILEIRA",
-          "vrPatrimonio":"10000.00",
-          "escolaridade":"1",
-          "empresa":{
-             "empresa":"INSS",
-             "profissao":"PROFISSAO NAO DEFINIDA",
-             "dtAdmissao":"2023-03-15",
-             "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissao":"APOSENTADO PRIVADO",
-             "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissaoOr":"APOSENTADO PRIVADO"
-          }
-       },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
+            "nmCliente": "JOaO ROdrIGO souza CARDOSOO",
             "dtNascimento": "1945-11-22",
             "nmMae": "RAAIMUNDA NONATA SILVA",
             "nmPai": "NAO CONSTA NO DOCUMENTO",
@@ -19725,261 +18130,6 @@ Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_inss_re
     })
 })
 
-Cypress.Commands.add('situacao_cpf_receita_reprovado_inss_representante_legal', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "9876543243210",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "6",
-            "qtParcelasPagas": "6",
-            "qtParcelasVencer": "4",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 2
-        },
-        "cliente":{
-          "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-          "dtNascimento":"1954-09-30",
-          "nmMae":"MARGARIDA ROSA DE JESUS",
-          "nmPai":"ADELINO SOARES DE OLIVEIRA",
-          "nmSexo":"F",
-          "dsEstadoCivil":"NAO DEFINIDO",
-          "nmEmail":"",
-          "nuRG":"5272424",
-          "nuCpf":"61615160396",
-          "dtEmissaoRg":"2010-10-10",
-          "nmOrgaoEmissorRg":"SSP",
-          "nmUfOrgaoEmissorRg":"MG",
-          "dsNaturalidade":"LAGOA SANTA",
-          "nmEnderecoResidencialTipo":1,
-          "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-          "nmEnderecoResidencialNumero":"361",
-          "nmEnderecoResidencialComplemento":null,
-          "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-          "nmEnderecoResidencialCidade":"LAGOA SANTA",
-          "nmEnderecoResidencialUf":"MG",
-          "nuEnderecoResidencialCep":"33400000",
-          "nuDddTelefoneCelular":31993650728,
-          "nuDddTelefoneResidencial":1,
-          "vrRenda":"1220.00",
-          "nuCNH":"",
-          "tempoResidencia":"0",
-          "tipoLogradouro":"None",
-          "dsNacionalidade":"BRASILEIRA",
-          "vrPatrimonio":"10000.00",
-          "escolaridade":"1",
-          "empresa":{
-             "empresa":"INSS",
-             "profissao":"PROFISSAO NAO DEFINIDA",
-             "dtAdmissao":"2023-03-15",
-             "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissao":"APOSENTADO PRIVADO",
-             "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissaoOr":"APOSENTADO PRIVADO"
-          }
-       },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "02806073254",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "automacao"
-    }
-    })
-})
 
 //----------------------------------------------Cartão Benefício Representante Legal----------------------------------------------
 
@@ -19990,7 +18140,7 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "35194050001",
+            "nuContratoFacta": "3143212131",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -20017,7 +18167,9 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
             "nuContratoCCB": "54568972",
             "recusado": "false",
             "docsValidados": "false",
-            "tipoProduto": 3
+            "tipoProduto": 3,
+            "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+            "status": 1
         },
         "cliente":{
           "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
@@ -20061,14 +18213,14 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
           }
        },
         "representante": {
-            "nmCliente": "SIMONE DO ROSARIO SILVA",
+            "nmCliente": "MARGARIDA ROSA DE JESUS",
             "dtNascimento": "1985-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
+            "nmMae": "RAIMUNDA NONATA SILVA",
             "nmPai": "NAO CONSTA NO DOCUMENTO",
             "nmSexo": "F",
             "dsEstadoCivil": "OUTROS",
             "nmEmail": "",
-            "nuCpf": "02804648354",
+            "nuCpf": "70828658057",
             "dtEmissaoRg": "2018-09-19",
             "nmOrgaoEmissorRg": "SSP",
             "nmUfOrgaoEmissorRg": "MA",
@@ -20234,7 +18386,8 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
             "cdCreditoTipo": "1"
         },
         "anexos": [],
-        "operacao": "automacao"
+        "operacao": "automacao",
+        "urlAmbiente": "https://cessao-staging1.byx.capital"
     }
     })
 })
@@ -23671,7 +21824,7 @@ Cypress.Commands.add('tempo_minimo_beneficio_reprovado_cartao_beneficio_represen
             "ufBeneficio": "AC",
             "tipoBeneficio": "87",
             "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2023-01-02",
+            "dtConcessaoBeneficio": "2024-03-05",
             "dia_util_pagamento": "",
             "dia_util_forma_pagamento": ""
         },
@@ -25094,14 +23247,14 @@ Cypress.Commands.add('contrato_lista_restritiva_reprovado_cartao_beneficio_repre
     })
 })
 
-Cypress.Commands.add('validacao_bureau_reprovado_cartao_beneficio_representante_legal', project => {
+Cypress.Commands.add('contrato_representante_legal_nato_cartao_beneficio_representante_legal', project => {
     cy.request({
       method: 'POST',
       url: `/analise-contrato/`,
       body: {
         "contrato": {
             "nuLote": "42",
-            "nuContratoFacta": "35194050001",
+            "nuContratoFacta": "9876543243211",
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
@@ -25131,519 +23284,7 @@ Cypress.Commands.add('validacao_bureau_reprovado_cartao_beneficio_representante_
             "tipoProduto": 3
         },
         "cliente": {
-            "nmCliente": "josé guilherme silva cardoso",
-            "dtNascimento": "2001-08-09",
-            "nmMae": "SIMONE DO ROSARIO SILVA",
-            "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
-            "nmSexo": "M",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuRG": "0501792520132",
-            "nuCpf": "61615160396",
-            "dtEmissaoRg": "2016-10-25",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "PINHEIRO",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
-            "nmEnderecoResidencialCidade": "Porto Alegre",
-            "nmEnderecoResidencialUf": "RS",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "nuCNH": "",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "None",
-            "dsNacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "empresa": {
-                "empresa": "INSS 29979036000140",
-                "profissao": " PROFISSAO NAO DEFINIDA",
-                "dtAdmissao": "2022-12-02",
-                "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
-                "tipoProfissao": "PENSIONISTA",
-                "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
-                "tipoProfissaoOr": "PENSIONISTA"
-            }
-        },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "02806073254",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "automacao"
-    }
-    })
-})
-
-Cypress.Commands.add('situacao_cpf_receita_reprovado_cartao_beneficio_representante_legal', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "9876543243210",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "6",
-            "qtParcelasPagas": "6",
-            "qtParcelasVencer": "4",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 3
-        },
-        "cliente":{
-          "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-          "dtNascimento":"1954-09-30",
-          "nmMae":"MARGARIDA ROSA DE JESUS",
-          "nmPai":"ADELINO SOARES DE OLIVEIRA",
-          "nmSexo":"F",
-          "dsEstadoCivil":"NAO DEFINIDO",
-          "nmEmail":"",
-          "nuRG":"5272424",
-          "nuCpf":"61615160396",
-          "dtEmissaoRg":"2010-10-10",
-          "nmOrgaoEmissorRg":"SSP",
-          "nmUfOrgaoEmissorRg":"MG",
-          "dsNaturalidade":"LAGOA SANTA",
-          "nmEnderecoResidencialTipo":1,
-          "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-          "nmEnderecoResidencialNumero":"361",
-          "nmEnderecoResidencialComplemento":null,
-          "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-          "nmEnderecoResidencialCidade":"LAGOA SANTA",
-          "nmEnderecoResidencialUf":"MG",
-          "nuEnderecoResidencialCep":"33400000",
-          "nuDddTelefoneCelular":31993650728,
-          "nuDddTelefoneResidencial":1,
-          "vrRenda":"1220.00",
-          "nuCNH":"",
-          "tempoResidencia":"0",
-          "tipoLogradouro":"None",
-          "dsNacionalidade":"BRASILEIRA",
-          "vrPatrimonio":"10000.00",
-          "escolaridade":"1",
-          "empresa":{
-             "empresa":"INSS",
-             "profissao":"PROFISSAO NAO DEFINIDA",
-             "dtAdmissao":"2023-03-15",
-             "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissao":"APOSENTADO PRIVADO",
-             "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissaoOr":"APOSENTADO PRIVADO"
-          }
-       },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "02806073254",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "automacao"
-    }
-    })
-})
-
-Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_cartao_beneficio_representante_legal', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "35194050001",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "6",
-            "qtParcelasPagas": "6",
-            "qtParcelasVencer": "4",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 3
-        },
-        "cliente": {
-            "nmCliente": "josé guilherme silva cardoso",
+            "nmCliente": "joao guilherme silva cardoso",
             "dtNascimento": "2000-08-09",
             "nmMae": "SIMONE DO ROSARIO SILVA",
             "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
@@ -25684,263 +23325,7 @@ Cypress.Commands.add('validacao_bureau_representante_legal_reprovado_cartao_bene
             }
         },
         "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
-            "dtNascimento": "1945-11-22",
-            "nmMae": "RAAIMUNDA NONATA SILVA",
-            "nmPai": "NAO CONSTA NO DOCUMENTO",
-            "nmSexo": "F",
-            "dsEstadoCivil": "OUTROS",
-            "nmEmail": "",
-            "nuCpf": "61615160396",
-            "dtEmissaoRg": "2018-09-19",
-            "nmOrgaoEmissorRg": "SSP",
-            "nmUfOrgaoEmissorRg": "AC",
-            "dsNaturalidade": "ACRELANDIA",
-            "nmEnderecoResidencialTipo": "1",
-            "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-            "nmEnderecoResidencialNumero": "41",
-            "nmEnderecoResidencialComplento": "None",
-            "nmEnderecoResidencialBairro": "JUREICO",
-            "nmEnderecoResidencialCidade": "ACRELANDIA",
-            "nmEnderecoResidencialUf": "MA",
-            "nuEnderecoResidencialCep": "65200000",
-            "nuDddTelefoneCelular": "098984645210",
-            "nuDddTelefoneResidencial": "1",
-            "vrRenda": "1212.0",
-            "tempoResidencia": "0",
-            "tipoLogradouro": "",
-            "nacionalidade": "BRASILEIRA",
-            "vrPatrimonio": "10000.0",
-            "escolaridade": "1",
-            "nuRG": "0207870320028"
-        },
-        "beneficio": {
-            "matricula": "7042811594",
-            "ufBeneficio": "AC",
-            "tipoBeneficio": "87",
-            "vrBeneficio": "1212.0",
-            "dtConcessaoBeneficio": "2019-01-02",
-            "dia_util_pagamento": "",
-            "dia_util_forma_pagamento": ""
-        },
-        "parcela": [
-            {
-                "nuParcela": "1",
-                "dtVencimento": "2022-12-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2022-12-07"
-            },
-            {
-                "nuParcela": "2",
-                "dtVencimento": "2023-01-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-01-07"
-            },
-            {
-                "nuParcela": "3",
-                "dtVencimento": "2023-02-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-02-07"
-            },
-            {
-                "nuParcela": "4",
-                "dtVencimento": "2023-03-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "5",
-                "dtVencimento": "2023-04-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "6",
-                "dtVencimento": "2023-05-07",
-                "vrParcela": "44.11",
-                "recebido_facta": true,
-                "paga": true,
-                "vrPago": "44.11",
-                "dtPagamento": "2023-03-07"
-            },
-            {
-                "nuParcela": "7",
-                "dtVencimento": "2023-06-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "8",
-                "dtVencimento": "2023-07-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "9",
-                "dtVencimento": "2023-08-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "10",
-                "dtVencimento": "2023-09-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "11",
-                "dtVencimento": "2023-10-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            },
-            {
-                "nuParcela": "12",
-                "dtVencimento": "2023-11-07",
-                "vrParcela": "44.11",
-                "recebido_facta": false,
-                "paga": false,
-                "vrPago": "",
-                "dtPagamento": ""
-            }
-        ],
-        "contratosOrigem": [
-            {
-                "dtContratoOrigem": "0001-01-01",
-                "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                "nuContratoOrigem": "0",
-                "nuCnpjCorrespondenteOrigem": "0",
-                "cdInstFinanceiraOrigem": "149",
-                "vrContratoOrigem": "0.0",
-                "vrSaldoContratoOrigem": "0.0",
-                "contrato": ""
-            }
-        ],
-        "dadosBancariosSacado": {
-            "cdContaTipo": "1",
-            "nuBanco": "001",
-            "nuAgencia": "6044",
-            "nuConta": "001368184",
-            "nuContaDigito": "2",
-            "nuCpfTitular": "61615160396",
-            "nuCnpjTitular": 1,
-            "cdCreditoTipo": "1"
-        },
-        "anexos": [],
-        "operacao": "automacao"
-    }
-    })
-})
-
-Cypress.Commands.add('situacao_cpf_receita_representante_legal_reprovado_cartao_beneficio_representante_legal', project => {
-    cy.request({
-      method: 'POST',
-      url: `/analise-contrato/`,
-      body: {
-        "contrato": {
-            "nuLote": "42",
-            "nuContratoFacta": "9876543243210",
-            "cdContratoTipo": "1",
-            "nuCnpjCorrespondente": "01360251000140",
-            "dtDigitacao": "2022-10-04",
-            "dtContrato": "2022-09-15",
-            "dtPrimeiroVencimento": "2022-12-07",
-            "nuCpfAgenteValidador": "01217961160",
-            "qtParcelasAberto": "6",
-            "qtParcelasPagas": "6",
-            "qtParcelasVencer": "4",
-            "qtParcelasAverbadas": "12",
-            "qtParcelasTotal": "12",
-            "txCETAno": "0.5246999",
-            "txCETMes": "0.0312910",
-            "txEfetivaAno": "0.4357594",
-            "txEfetivaMes": "0.0213000",
-            "vrAberto": "3705.24",
-            "vrContrato": "1166.51",
-            "vrIof": "38.41",
-            "vrParcela": "44.11",
-            "vrVencer": "3705.24",
-            "vrLiberadoCliente": "1166.51",
-            "vrTAC": "0.0",
-            "vrSeguro": "0.0",
-            "nuContratoCCB": "54568972",
-            "recusado": "false",
-            "docsValidados": "false",
-            "tipoProduto": 3
-        },
-        "cliente":{
-          "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-          "dtNascimento":"1954-09-30",
-          "nmMae":"MARGARIDA ROSA DE JESUS",
-          "nmPai":"ADELINO SOARES DE OLIVEIRA",
-          "nmSexo":"F",
-          "dsEstadoCivil":"NAO DEFINIDO",
-          "nmEmail":"",
-          "nuRG":"5272424",
-          "nuCpf":"61615160396",
-          "dtEmissaoRg":"2010-10-10",
-          "nmOrgaoEmissorRg":"SSP",
-          "nmUfOrgaoEmissorRg":"MG",
-          "dsNaturalidade":"LAGOA SANTA",
-          "nmEnderecoResidencialTipo":1,
-          "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-          "nmEnderecoResidencialNumero":"361",
-          "nmEnderecoResidencialComplemento":null,
-          "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-          "nmEnderecoResidencialCidade":"LAGOA SANTA",
-          "nmEnderecoResidencialUf":"MG",
-          "nuEnderecoResidencialCep":"33400000",
-          "nuDddTelefoneCelular":31993650728,
-          "nuDddTelefoneResidencial":1,
-          "vrRenda":"1220.00",
-          "nuCNH":"",
-          "tempoResidencia":"0",
-          "tipoLogradouro":"None",
-          "dsNacionalidade":"BRASILEIRA",
-          "vrPatrimonio":"10000.00",
-          "escolaridade":"1",
-          "empresa":{
-             "empresa":"INSS",
-             "profissao":"PROFISSAO NAO DEFINIDA",
-             "dtAdmissao":"2023-03-15",
-             "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissao":"APOSENTADO PRIVADO",
-             "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-             "tipoProfissaoOr":"APOSENTADO PRIVADO"
-          }
-       },
-        "representante": {
-            "nmCliente": "ANGELICA PINTO MAIA",
+            "nmCliente": "SIMONE DO ROSARIO AIRES",
             "dtNascimento": "1945-11-22",
             "nmMae": "RAAIMUNDA NONATA SILVA",
             "nmPai": "NAO CONSTA NO DOCUMENTO",
@@ -26127,7 +23512,7 @@ Cypress.Commands.add('analise_com_sucesso_siape', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": "35194050001",
+                "nuContratoFacta": "3143212131",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -26154,11 +23539,13 @@ Cypress.Commands.add('analise_com_sucesso_siape', project => {
                 "nuContratoCCB": "54568972",
                 "recusado": "false",
                 "docsValidados": "false",
-                "tipoProduto": 8
+                "tipoProduto": 8,
+                "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+                "status": 1
             },
             "cliente": {
                 "nmCliente": "TEREZINHA MARIA DE JESUS GONCALVES",
-                "dtNascimento": "1954-09-30",
+                "dtNascimento": "1970-01-02",
                 "nmMae": "MARGARIDA ROSA DE JESUS",
                 "nmPai": "ADELINO SOARES DE OLIVEIRA",
                 "nmSexo": "F",
@@ -26201,7 +23588,7 @@ Cypress.Commands.add('analise_com_sucesso_siape', project => {
             },
             "representante": {
                 "nmCliente": "SIMONE DO ROSARIO SILVA",
-                "dtNascimento": "1985-11-22",
+                "dtNascimento": "1995-11-22",
                 "nmMae": "RAAIMUNDA NONATA SILVA",
                 "nmPai": "NAO CONSTA NO DOCUMENTO",
                 "nmSexo": "F",
@@ -26233,9 +23620,9 @@ Cypress.Commands.add('analise_com_sucesso_siape', project => {
             "beneficio": {
                 "matricula": "1892433467",
                 "ufBeneficio": "MA",
-                "tipoBeneficio": "1",
+                "tipoBeneficio": "32",
                 "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
+                "dtConcessaoBeneficio": "2000-01-02",
                 "dia_util_pagamento": "",
                 "dia_util_forma_pagamento": ""
             },
@@ -26373,7 +23760,8 @@ Cypress.Commands.add('analise_com_sucesso_siape', project => {
                 "cdCreditoTipo": "1"
             },
             "anexos": [],
-            "operacao": "automacao"
+            "operacao": "automacao",
+            "urlAmbiente": "https://cessao-staging1.byx.capital"
         }
     })
 })
@@ -29908,518 +27296,6 @@ Cypress.Commands.add('range_data_vencimento_reprovado_siape', project => {
     })
 })
 
-Cypress.Commands.add('validacao_bureau_reprovado_siape', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        body: {
-            "contrato": {
-                "nuLote": "42",
-                "nuContratoFacta": "35194050001",
-                "cdContratoTipo": "1",
-                "nuCnpjCorrespondente": "01360251000140",
-                "dtDigitacao": "2022-10-04",
-                "dtContrato": "2022-09-15",
-                "dtPrimeiroVencimento": "2022-12-07",
-                "nuCpfAgenteValidador": "01217961160",
-                "qtParcelasAberto": "6",
-                "qtParcelasPagas": "6",
-                "qtParcelasVencer": "4",
-                "qtParcelasAverbadas": "12",
-                "qtParcelasTotal": "12",
-                "txCETAno": "0.5246999",
-                "txCETMes": "0.0312910",
-                "txEfetivaAno": "0.4357594",
-                "txEfetivaMes": "0.0213000",
-                "vrAberto": "3705.24",
-                "vrContrato": "1166.51",
-                "vrIof": "38.41",
-                "vrParcela": "44.11",
-                "vrVencer": "3705.24",
-                "vrLiberadoCliente": "1166.51",
-                "vrTAC": "0.0",
-                "vrSeguro": "0.0",
-                "nuContratoCCB": "54568972",
-                "recusado": "false",
-                "docsValidados": "false",
-                "tipoProduto": 8
-            },
-            "cliente": {
-                "nmCliente": "josé guilherme silva cardoso",
-                "dtNascimento": "2000-08-09",
-                "nmMae": "SIMONE DO ROSARIO SILVA",
-                "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
-                "nmSexo": "M",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuRG": "0501792520132",
-                "nuCpf": "61615160396",
-                "dtEmissaoRg": "2016-10-25",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "PINHEIRO",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
-                "nmEnderecoResidencialCidade": "Porto Alegre",
-                "nmEnderecoResidencialUf": "RS",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "nuCNH": "",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "None",
-                "dsNacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "empresa": {
-                    "empresa": "INSS 29979036000140",
-                    "profissao": " PROFISSAO NAO DEFINIDA",
-                    "dtAdmissao": "2022-12-02",
-                    "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
-                    "tipoProfissao": "PENSIONISTA",
-                    "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
-                    "tipoProfissaoOr": "PENSIONISTA"
-                }
-            },
-            "representante": {
-                "nmCliente": "ANGELICA PINTO MAIA",
-                "dtNascimento": "1945-11-22",
-                "nmMae": "RAAIMUNDA NONATA SILVA",
-                "nmPai": "NAO CONSTA NO DOCUMENTO",
-                "nmSexo": "F",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuCpf": "02806073254",
-                "dtEmissaoRg": "2018-09-19",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "ACRELANDIA",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "JUREICO",
-                "nmEnderecoResidencialCidade": "ACRELANDIA",
-                "nmEnderecoResidencialUf": "MA",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "",
-                "nacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "nuRG": "0207870320028"
-            },
-            "beneficio": {
-                "matricula": "7042811594",
-                "ufBeneficio": "AC",
-                "tipoBeneficio": "87",
-                "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
-                "dia_util_pagamento": "",
-                "dia_util_forma_pagamento": ""
-            },
-            "parcela": [
-                {
-                    "nuParcela": "1",
-                    "dtVencimento": "2022-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2022-12-07"
-                },
-                {
-                    "nuParcela": "2",
-                    "dtVencimento": "2023-01-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-01-07"
-                },
-                {
-                    "nuParcela": "3",
-                    "dtVencimento": "2023-02-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-02-07"
-                },
-                {
-                    "nuParcela": "4",
-                    "dtVencimento": "2023-03-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "5",
-                    "dtVencimento": "2023-04-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "6",
-                    "dtVencimento": "2023-05-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "7",
-                    "dtVencimento": "2023-06-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "8",
-                    "dtVencimento": "2023-07-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "9",
-                    "dtVencimento": "2023-08-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "10",
-                    "dtVencimento": "2023-09-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "11",
-                    "dtVencimento": "2023-10-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "12",
-                    "dtVencimento": "2023-11-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                }
-            ],
-            "contratosOrigem": [
-                {
-                    "dtContratoOrigem": "0001-01-01",
-                    "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                    "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                    "nuContratoOrigem": "0",
-                    "nuCnpjCorrespondenteOrigem": "0",
-                    "cdInstFinanceiraOrigem": "149",
-                    "vrContratoOrigem": "0.0",
-                    "vrSaldoContratoOrigem": "0.0",
-                    "contrato": ""
-                }
-            ],
-            "dadosBancariosSacado": {
-                "cdContaTipo": "1",
-                "nuBanco": "001",
-                "nuAgencia": "6044",
-                "nuConta": "001368184",
-                "nuContaDigito": "2",
-                "nuCpfTitular": "61615160396",
-                "nuCnpjTitular": 1,
-                "cdCreditoTipo": "1"
-            },
-            "anexos": [],
-            "operacao": "automacao"
-        }
-    })
-})
-
-Cypress.Commands.add('situacao_cpf_receita_reprovado_siape', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        body: {
-            "contrato": {
-                "nuLote": "42",
-                "nuContratoFacta": "9876543243210",
-                "cdContratoTipo": "1",
-                "nuCnpjCorrespondente": "01360251000140",
-                "dtDigitacao": "2022-10-04",
-                "dtContrato": "2022-09-15",
-                "dtPrimeiroVencimento": "2022-12-07",
-                "nuCpfAgenteValidador": "01217961160",
-                "qtParcelasAberto": "6",
-                "qtParcelasPagas": "6",
-                "qtParcelasVencer": "4",
-                "qtParcelasAverbadas": "12",
-                "qtParcelasTotal": "12",
-                "txCETAno": "0.5246999",
-                "txCETMes": "0.0312910",
-                "txEfetivaAno": "0.4357594",
-                "txEfetivaMes": "0.0213000",
-                "vrAberto": "3705.24",
-                "vrContrato": "1166.51",
-                "vrIof": "38.41",
-                "vrParcela": "44.11",
-                "vrVencer": "3705.24",
-                "vrLiberadoCliente": "1166.51",
-                "vrTAC": "0.0",
-                "vrSeguro": "0.0",
-                "nuContratoCCB": "54568972",
-                "recusado": "false",
-                "docsValidados": "false",
-                "tipoProduto": 8
-            },
-            "cliente":{
-              "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-              "dtNascimento":"1954-09-30",
-              "nmMae":"MARGARIDA ROSA DE JESUS",
-              "nmPai":"ADELINO SOARES DE OLIVEIRA",
-              "nmSexo":"F",
-              "dsEstadoCivil":"NAO DEFINIDO",
-              "nmEmail":"",
-              "nuRG":"5272424",
-              "nuCpf":"61615160396",
-              "dtEmissaoRg":"2010-10-10",
-              "nmOrgaoEmissorRg":"SSP",
-              "nmUfOrgaoEmissorRg":"MG",
-              "dsNaturalidade":"LAGOA SANTA",
-              "nmEnderecoResidencialTipo":1,
-              "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-              "nmEnderecoResidencialNumero":"361",
-              "nmEnderecoResidencialComplemento":null,
-              "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-              "nmEnderecoResidencialCidade":"LAGOA SANTA",
-              "nmEnderecoResidencialUf":"MG",
-              "nuEnderecoResidencialCep":"33400000",
-              "nuDddTelefoneCelular":31993650728,
-              "nuDddTelefoneResidencial":1,
-              "vrRenda":"1220.00",
-              "nuCNH":"",
-              "tempoResidencia":"0",
-              "tipoLogradouro":"None",
-              "dsNacionalidade":"BRASILEIRA",
-              "vrPatrimonio":"10000.00",
-              "escolaridade":"1",
-              "empresa":{
-                 "empresa":"INSS",
-                 "profissao":"PROFISSAO NAO DEFINIDA",
-                 "dtAdmissao":"2023-03-15",
-                 "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-                 "tipoProfissao":"APOSENTADO PRIVADO",
-                 "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-                 "tipoProfissaoOr":"APOSENTADO PRIVADO"
-              }
-           },
-            "representante": {
-                "nmCliente": "ANGELICA PINTO MAIA",
-                "dtNascimento": "1945-11-22",
-                "nmMae": "RAAIMUNDA NONATA SILVA",
-                "nmPai": "NAO CONSTA NO DOCUMENTO",
-                "nmSexo": "F",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuCpf": "02806073254",
-                "dtEmissaoRg": "2018-09-19",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "ACRELANDIA",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "JUREICO",
-                "nmEnderecoResidencialCidade": "ACRELANDIA",
-                "nmEnderecoResidencialUf": "MA",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "",
-                "nacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "nuRG": "0207870320028"
-            },
-            "beneficio": {
-                "matricula": "7042811594",
-                "ufBeneficio": "AC",
-                "tipoBeneficio": "87",
-                "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
-                "dia_util_pagamento": "",
-                "dia_util_forma_pagamento": ""
-            },
-            "parcela": [
-                {
-                    "nuParcela": "1",
-                    "dtVencimento": "2022-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2022-12-07"
-                },
-                {
-                    "nuParcela": "2",
-                    "dtVencimento": "2023-01-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-01-07"
-                },
-                {
-                    "nuParcela": "3",
-                    "dtVencimento": "2023-02-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-02-07"
-                },
-                {
-                    "nuParcela": "4",
-                    "dtVencimento": "2023-03-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "5",
-                    "dtVencimento": "2023-04-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "6",
-                    "dtVencimento": "2023-05-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "7",
-                    "dtVencimento": "2023-06-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "8",
-                    "dtVencimento": "2023-07-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "9",
-                    "dtVencimento": "2023-08-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "10",
-                    "dtVencimento": "2023-09-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "11",
-                    "dtVencimento": "2023-10-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "12",
-                    "dtVencimento": "2023-11-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                }
-            ],
-            "contratosOrigem": [
-                {
-                    "dtContratoOrigem": "0001-01-01",
-                    "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                    "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                    "nuContratoOrigem": "0",
-                    "nuCnpjCorrespondenteOrigem": "0",
-                    "cdInstFinanceiraOrigem": "149",
-                    "vrContratoOrigem": "0.0",
-                    "vrSaldoContratoOrigem": "0.0",
-                    "contrato": ""
-                }
-            ],
-            "dadosBancariosSacado": {
-                "cdContaTipo": "1",
-                "nuBanco": "001",
-                "nuAgencia": "6044",
-                "nuConta": "001368184",
-                "nuContaDigito": "2",
-                "nuCpfTitular": "61615160396",
-                "nuCnpjTitular": 1,
-                "cdCreditoTipo": "1"
-            },
-            "anexos": [],
-            "operacao": "automacao"
-        }
-    })
-})
-
 Cypress.Commands.add('codigo_upag_reprovado_siape', project => {
     cy.request({
         method: 'POST',
@@ -30945,7 +27821,7 @@ Cypress.Commands.add('analise_com_sucesso_exercito', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": "35194050001",
+                "nuContratoFacta": "3143212131",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -30972,7 +27848,9 @@ Cypress.Commands.add('analise_com_sucesso_exercito', project => {
                 "nuContratoCCB": "54568972",
                 "recusado": "false",
                 "docsValidados": "false",
-                "tipoProduto": 9
+                "tipoProduto": 9,
+                "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+                "status": 1
             },
             "cliente": {
                 "nmCliente": "TEREZINHA MARIA DE JESUS GONCALVES",
@@ -31192,7 +28070,8 @@ Cypress.Commands.add('analise_com_sucesso_exercito', project => {
                 "cdCreditoTipo": "1"
             },
             "anexos": [],
-            "operacao": "automacao"
+            "operacao": "automacao",
+            "urlAmbiente": "https://cessao-staging1.byx.capital"
         }
     })
 })
@@ -34727,518 +31606,6 @@ Cypress.Commands.add('range_data_vencimento_reprovado_exercito', project => {
     })
 })
 
-Cypress.Commands.add('validacao_bureau_reprovado_exercito', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        body: {
-            "contrato": {
-                "nuLote": "42",
-                "nuContratoFacta": "35194050001",
-                "cdContratoTipo": "1",
-                "nuCnpjCorrespondente": "01360251000140",
-                "dtDigitacao": "2022-10-04",
-                "dtContrato": "2022-09-15",
-                "dtPrimeiroVencimento": "2022-12-07",
-                "nuCpfAgenteValidador": "01217961160",
-                "qtParcelasAberto": "6",
-                "qtParcelasPagas": "6",
-                "qtParcelasVencer": "4",
-                "qtParcelasAverbadas": "12",
-                "qtParcelasTotal": "12",
-                "txCETAno": "0.5246999",
-                "txCETMes": "0.0312910",
-                "txEfetivaAno": "0.4357594",
-                "txEfetivaMes": "0.0213000",
-                "vrAberto": "3705.24",
-                "vrContrato": "1166.51",
-                "vrIof": "38.41",
-                "vrParcela": "44.11",
-                "vrVencer": "3705.24",
-                "vrLiberadoCliente": "1166.51",
-                "vrTAC": "0.0",
-                "vrSeguro": "0.0",
-                "nuContratoCCB": "54568972",
-                "recusado": "false",
-                "docsValidados": "false",
-                "tipoProduto": 9
-            },
-            "cliente": {
-                "nmCliente": "josé guilherme silva cardoso",
-                "dtNascimento": "2000-08-09",
-                "nmMae": "SIMONE DO ROSARIO SILVA",
-                "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
-                "nmSexo": "M",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuRG": "0501792520132",
-                "nuCpf": "61615160396",
-                "dtEmissaoRg": "2016-10-25",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "PINHEIRO",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
-                "nmEnderecoResidencialCidade": "Porto Alegre",
-                "nmEnderecoResidencialUf": "RS",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "nuCNH": "",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "None",
-                "dsNacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "empresa": {
-                    "empresa": "INSS 29979036000140",
-                    "profissao": " PROFISSAO NAO DEFINIDA",
-                    "dtAdmissao": "2022-12-02",
-                    "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
-                    "tipoProfissao": "PENSIONISTA",
-                    "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
-                    "tipoProfissaoOr": "PENSIONISTA"
-                }
-            },
-            "representante": {
-                "nmCliente": "ANGELICA PINTO MAIA",
-                "dtNascimento": "1945-11-22",
-                "nmMae": "RAAIMUNDA NONATA SILVA",
-                "nmPai": "NAO CONSTA NO DOCUMENTO",
-                "nmSexo": "F",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuCpf": "02806073254",
-                "dtEmissaoRg": "2018-09-19",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "ACRELANDIA",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "JUREICO",
-                "nmEnderecoResidencialCidade": "ACRELANDIA",
-                "nmEnderecoResidencialUf": "MA",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "",
-                "nacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "nuRG": "0207870320028"
-            },
-            "beneficio": {
-                "matricula": "7042811594",
-                "ufBeneficio": "AC",
-                "tipoBeneficio": "87",
-                "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
-                "dia_util_pagamento": "",
-                "dia_util_forma_pagamento": ""
-            },
-            "parcela": [
-                {
-                    "nuParcela": "1",
-                    "dtVencimento": "2022-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2022-12-07"
-                },
-                {
-                    "nuParcela": "2",
-                    "dtVencimento": "2023-01-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-01-07"
-                },
-                {
-                    "nuParcela": "3",
-                    "dtVencimento": "2023-02-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-02-07"
-                },
-                {
-                    "nuParcela": "4",
-                    "dtVencimento": "2023-03-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "5",
-                    "dtVencimento": "2023-04-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "6",
-                    "dtVencimento": "2023-05-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "7",
-                    "dtVencimento": "2023-06-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "8",
-                    "dtVencimento": "2023-07-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "9",
-                    "dtVencimento": "2023-08-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "10",
-                    "dtVencimento": "2023-09-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "11",
-                    "dtVencimento": "2023-10-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "12",
-                    "dtVencimento": "2023-11-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                }
-            ],
-            "contratosOrigem": [
-                {
-                    "dtContratoOrigem": "0001-01-01",
-                    "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                    "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                    "nuContratoOrigem": "0",
-                    "nuCnpjCorrespondenteOrigem": "0",
-                    "cdInstFinanceiraOrigem": "149",
-                    "vrContratoOrigem": "0.0",
-                    "vrSaldoContratoOrigem": "0.0",
-                    "contrato": ""
-                }
-            ],
-            "dadosBancariosSacado": {
-                "cdContaTipo": "1",
-                "nuBanco": "001",
-                "nuAgencia": "6044",
-                "nuConta": "001368184",
-                "nuContaDigito": "2",
-                "nuCpfTitular": "61615160396",
-                "nuCnpjTitular": 1,
-                "cdCreditoTipo": "1"
-            },
-            "anexos": [],
-            "operacao": "automacao"
-        }
-    })
-})
-
-Cypress.Commands.add('situacao_cpf_receita_reprovado_exercito', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        body: {
-            "contrato": {
-                "nuLote": "42",
-                "nuContratoFacta": "9876543243210",
-                "cdContratoTipo": "1",
-                "nuCnpjCorrespondente": "01360251000140",
-                "dtDigitacao": "2022-10-04",
-                "dtContrato": "2022-09-15",
-                "dtPrimeiroVencimento": "2022-12-07",
-                "nuCpfAgenteValidador": "01217961160",
-                "qtParcelasAberto": "6",
-                "qtParcelasPagas": "6",
-                "qtParcelasVencer": "4",
-                "qtParcelasAverbadas": "12",
-                "qtParcelasTotal": "12",
-                "txCETAno": "0.5246999",
-                "txCETMes": "0.0312910",
-                "txEfetivaAno": "0.4357594",
-                "txEfetivaMes": "0.0213000",
-                "vrAberto": "3705.24",
-                "vrContrato": "1166.51",
-                "vrIof": "38.41",
-                "vrParcela": "44.11",
-                "vrVencer": "3705.24",
-                "vrLiberadoCliente": "1166.51",
-                "vrTAC": "0.0",
-                "vrSeguro": "0.0",
-                "nuContratoCCB": "54568972",
-                "recusado": "false",
-                "docsValidados": "false",
-                "tipoProduto": 9
-            },
-            "cliente":{
-              "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-              "dtNascimento":"1954-09-30",
-              "nmMae":"MARGARIDA ROSA DE JESUS",
-              "nmPai":"ADELINO SOARES DE OLIVEIRA",
-              "nmSexo":"F",
-              "dsEstadoCivil":"NAO DEFINIDO",
-              "nmEmail":"",
-              "nuRG":"5272424",
-              "nuCpf":"61615160396",
-              "dtEmissaoRg":"2010-10-10",
-              "nmOrgaoEmissorRg":"SSP",
-              "nmUfOrgaoEmissorRg":"MG",
-              "dsNaturalidade":"LAGOA SANTA",
-              "nmEnderecoResidencialTipo":1,
-              "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-              "nmEnderecoResidencialNumero":"361",
-              "nmEnderecoResidencialComplemento":null,
-              "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-              "nmEnderecoResidencialCidade":"LAGOA SANTA",
-              "nmEnderecoResidencialUf":"MG",
-              "nuEnderecoResidencialCep":"33400000",
-              "nuDddTelefoneCelular":31993650728,
-              "nuDddTelefoneResidencial":1,
-              "vrRenda":"1220.00",
-              "nuCNH":"",
-              "tempoResidencia":"0",
-              "tipoLogradouro":"None",
-              "dsNacionalidade":"BRASILEIRA",
-              "vrPatrimonio":"10000.00",
-              "escolaridade":"1",
-              "empresa":{
-                 "empresa":"INSS",
-                 "profissao":"PROFISSAO NAO DEFINIDA",
-                 "dtAdmissao":"2023-03-15",
-                 "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-                 "tipoProfissao":"APOSENTADO PRIVADO",
-                 "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-                 "tipoProfissaoOr":"APOSENTADO PRIVADO"
-              }
-           },
-            "representante": {
-                "nmCliente": "ANGELICA PINTO MAIA",
-                "dtNascimento": "1945-11-22",
-                "nmMae": "RAAIMUNDA NONATA SILVA",
-                "nmPai": "NAO CONSTA NO DOCUMENTO",
-                "nmSexo": "F",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuCpf": "02806073254",
-                "dtEmissaoRg": "2018-09-19",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "ACRELANDIA",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "JUREICO",
-                "nmEnderecoResidencialCidade": "ACRELANDIA",
-                "nmEnderecoResidencialUf": "MA",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "",
-                "nacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "nuRG": "0207870320028"
-            },
-            "beneficio": {
-                "matricula": "7042811594",
-                "ufBeneficio": "AC",
-                "tipoBeneficio": "87",
-                "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
-                "dia_util_pagamento": "",
-                "dia_util_forma_pagamento": ""
-            },
-            "parcela": [
-                {
-                    "nuParcela": "1",
-                    "dtVencimento": "2022-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2022-12-07"
-                },
-                {
-                    "nuParcela": "2",
-                    "dtVencimento": "2023-01-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-01-07"
-                },
-                {
-                    "nuParcela": "3",
-                    "dtVencimento": "2023-02-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-02-07"
-                },
-                {
-                    "nuParcela": "4",
-                    "dtVencimento": "2023-03-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "5",
-                    "dtVencimento": "2023-04-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "6",
-                    "dtVencimento": "2023-05-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "7",
-                    "dtVencimento": "2023-06-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "8",
-                    "dtVencimento": "2023-07-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "9",
-                    "dtVencimento": "2023-08-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "10",
-                    "dtVencimento": "2023-09-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "11",
-                    "dtVencimento": "2023-10-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "12",
-                    "dtVencimento": "2023-11-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                }
-            ],
-            "contratosOrigem": [
-                {
-                    "dtContratoOrigem": "0001-01-01",
-                    "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                    "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                    "nuContratoOrigem": "0",
-                    "nuCnpjCorrespondenteOrigem": "0",
-                    "cdInstFinanceiraOrigem": "149",
-                    "vrContratoOrigem": "0.0",
-                    "vrSaldoContratoOrigem": "0.0",
-                    "contrato": ""
-                }
-            ],
-            "dadosBancariosSacado": {
-                "cdContaTipo": "1",
-                "nuBanco": "001",
-                "nuAgencia": "6044",
-                "nuConta": "001368184",
-                "nuContaDigito": "2",
-                "nuCpfTitular": "61615160396",
-                "nuCnpjTitular": 1,
-                "cdCreditoTipo": "1"
-            },
-            "anexos": [],
-            "operacao": "automacao"
-        }
-    })
-})
-
 Cypress.Commands.add('categoria_reprovado_exercito', project => {
     cy.request({
         method: 'POST',
@@ -35507,7 +31874,7 @@ Cypress.Commands.add('analise_com_sucesso_marinha', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": "35194050001",
+                "nuContratoFacta": "3143212131",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -35534,7 +31901,9 @@ Cypress.Commands.add('analise_com_sucesso_marinha', project => {
                 "nuContratoCCB": "54568972",
                 "recusado": "false",
                 "docsValidados": "false",
-                "tipoProduto": 10
+                "tipoProduto": 10,
+                "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+                "status": 1
             },
             "cliente": {
                 "nmCliente": "TEREZINHA MARIA DE JESUS GONCALVES",
@@ -35755,7 +32124,8 @@ Cypress.Commands.add('analise_com_sucesso_marinha', project => {
                 "cdCreditoTipo": "1"
             },
             "anexos": [],
-            "operacao": "automacao"
+            "operacao": "automacao",
+            "urlAmbiente": "https://cessao-staging1.byx.capital"
         }
     })
 })
@@ -38998,518 +35368,6 @@ Cypress.Commands.add('range_data_vencimento_reprovado_marinha', project => {
                 {
                     "nuParcela": "9",
                     "dtVencimento": "2023-08-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                }
-            ],
-            "contratosOrigem": [
-                {
-                    "dtContratoOrigem": "0001-01-01",
-                    "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                    "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                    "nuContratoOrigem": "0",
-                    "nuCnpjCorrespondenteOrigem": "0",
-                    "cdInstFinanceiraOrigem": "149",
-                    "vrContratoOrigem": "0.0",
-                    "vrSaldoContratoOrigem": "0.0",
-                    "contrato": ""
-                }
-            ],
-            "dadosBancariosSacado": {
-                "cdContaTipo": "1",
-                "nuBanco": "001",
-                "nuAgencia": "6044",
-                "nuConta": "001368184",
-                "nuContaDigito": "2",
-                "nuCpfTitular": "61615160396",
-                "nuCnpjTitular": 1,
-                "cdCreditoTipo": "1"
-            },
-            "anexos": [],
-            "operacao": "automacao"
-        }
-    })
-})
-
-Cypress.Commands.add('validacao_bureau_reprovado_marinha', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        body: {
-            "contrato": {
-                "nuLote": "42",
-                "nuContratoFacta": "35194050001",
-                "cdContratoTipo": "1",
-                "nuCnpjCorrespondente": "01360251000140",
-                "dtDigitacao": "2022-10-04",
-                "dtContrato": "2022-09-15",
-                "dtPrimeiroVencimento": "2022-12-07",
-                "nuCpfAgenteValidador": "01217961160",
-                "qtParcelasAberto": "6",
-                "qtParcelasPagas": "6",
-                "qtParcelasVencer": "4",
-                "qtParcelasAverbadas": "12",
-                "qtParcelasTotal": "12",
-                "txCETAno": "0.5246999",
-                "txCETMes": "0.0312910",
-                "txEfetivaAno": "0.4357594",
-                "txEfetivaMes": "0.0213000",
-                "vrAberto": "3705.24",
-                "vrContrato": "1166.51",
-                "vrIof": "38.41",
-                "vrParcela": "44.11",
-                "vrVencer": "3705.24",
-                "vrLiberadoCliente": "1166.51",
-                "vrTAC": "0.0",
-                "vrSeguro": "0.0",
-                "nuContratoCCB": "54568972",
-                "recusado": "false",
-                "docsValidados": "false",
-                "tipoProduto": 10
-            },
-            "cliente": {
-                "nmCliente": "josé guilherme silva cardoso",
-                "dtNascimento": "2000-08-09",
-                "nmMae": "SIMONE DO ROSARIO SILVA",
-                "nmPai": "JOAO RODRIGO SOUZA CARDOSO",
-                "nmSexo": "M",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuRG": "0501792520132",
-                "nuCpf": "61615160396",
-                "dtEmissaoRg": "2016-10-25",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "PINHEIRO",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "RESIDENCIAL JERICO",
-                "nmEnderecoResidencialCidade": "Porto Alegre",
-                "nmEnderecoResidencialUf": "RS",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "nuCNH": "",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "None",
-                "dsNacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "empresa": {
-                    "empresa": "INSS 29979036000140",
-                    "profissao": " PROFISSAO NAO DEFINIDA",
-                    "dtAdmissao": "2022-12-02",
-                    "ramoAtividade": "SEM ATIVIDADE PROFISSIONAL",
-                    "tipoProfissao": "PENSIONISTA",
-                    "ramoAtividadeOr": "SEM ATIVIDADE PROFISSIONAL",
-                    "tipoProfissaoOr": "PENSIONISTA"
-                }
-            },
-            "representante": {
-                "nmCliente": "ANGELICA PINTO MAIA",
-                "dtNascimento": "1945-11-22",
-                "nmMae": "RAAIMUNDA NONATA SILVA",
-                "nmPai": "NAO CONSTA NO DOCUMENTO",
-                "nmSexo": "F",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuCpf": "02806073254",
-                "dtEmissaoRg": "2018-09-19",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "ACRELANDIA",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "JUREICO",
-                "nmEnderecoResidencialCidade": "ACRELANDIA",
-                "nmEnderecoResidencialUf": "MA",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "",
-                "nacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "nuRG": "0207870320028"
-            },
-            "beneficio": {
-                "matricula": "7042811594",
-                "ufBeneficio": "AC",
-                "tipoBeneficio": "87",
-                "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
-                "dia_util_pagamento": "",
-                "dia_util_forma_pagamento": ""
-            },
-            "parcela": [
-                {
-                    "nuParcela": "1",
-                    "dtVencimento": "2022-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2022-12-07"
-                },
-                {
-                    "nuParcela": "2",
-                    "dtVencimento": "2023-01-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-01-07"
-                },
-                {
-                    "nuParcela": "3",
-                    "dtVencimento": "2023-02-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-02-07"
-                },
-                {
-                    "nuParcela": "4",
-                    "dtVencimento": "2023-03-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "5",
-                    "dtVencimento": "2023-04-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "6",
-                    "dtVencimento": "2023-05-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "7",
-                    "dtVencimento": "2023-06-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "8",
-                    "dtVencimento": "2023-07-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "9",
-                    "dtVencimento": "2023-08-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "10",
-                    "dtVencimento": "2023-09-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "11",
-                    "dtVencimento": "2023-10-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "12",
-                    "dtVencimento": "2023-11-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                }
-            ],
-            "contratosOrigem": [
-                {
-                    "dtContratoOrigem": "0001-01-01",
-                    "dtPrimeiroVencimentoContratoOrigem": "0001-01-01",
-                    "dtUltimoVencimentoContratoOrigem": "0001-01-01",
-                    "nuContratoOrigem": "0",
-                    "nuCnpjCorrespondenteOrigem": "0",
-                    "cdInstFinanceiraOrigem": "149",
-                    "vrContratoOrigem": "0.0",
-                    "vrSaldoContratoOrigem": "0.0",
-                    "contrato": ""
-                }
-            ],
-            "dadosBancariosSacado": {
-                "cdContaTipo": "1",
-                "nuBanco": "001",
-                "nuAgencia": "6044",
-                "nuConta": "001368184",
-                "nuContaDigito": "2",
-                "nuCpfTitular": "61615160396",
-                "nuCnpjTitular": 1,
-                "cdCreditoTipo": "1"
-            },
-            "anexos": [],
-            "operacao": "automacao"
-        }
-    })
-})
-
-Cypress.Commands.add('situacao_cpf_receita_reprovado_marinha', project => {
-    cy.request({
-        method: 'POST',
-        url: `/analise-contrato/`,
-        body: {
-            "contrato": {
-                "nuLote": "42",
-                "nuContratoFacta": "9876543243210",
-                "cdContratoTipo": "1",
-                "nuCnpjCorrespondente": "01360251000140",
-                "dtDigitacao": "2022-10-04",
-                "dtContrato": "2022-09-15",
-                "dtPrimeiroVencimento": "2022-12-07",
-                "nuCpfAgenteValidador": "01217961160",
-                "qtParcelasAberto": "6",
-                "qtParcelasPagas": "6",
-                "qtParcelasVencer": "4",
-                "qtParcelasAverbadas": "12",
-                "qtParcelasTotal": "12",
-                "txCETAno": "0.5246999",
-                "txCETMes": "0.0312910",
-                "txEfetivaAno": "0.4357594",
-                "txEfetivaMes": "0.0213000",
-                "vrAberto": "3705.24",
-                "vrContrato": "1166.51",
-                "vrIof": "38.41",
-                "vrParcela": "44.11",
-                "vrVencer": "3705.24",
-                "vrLiberadoCliente": "1166.51",
-                "vrTAC": "0.0",
-                "vrSeguro": "0.0",
-                "nuContratoCCB": "54568972",
-                "recusado": "false",
-                "docsValidados": "false",
-                "tipoProduto": 10
-            },
-            "cliente":{
-              "nmCliente":"TEREZINHA MARIA DE JESUS GONCALVES",
-              "dtNascimento":"1954-09-30",
-              "nmMae":"MARGARIDA ROSA DE JESUS",
-              "nmPai":"ADELINO SOARES DE OLIVEIRA",
-              "nmSexo":"F",
-              "dsEstadoCivil":"NAO DEFINIDO",
-              "nmEmail":"",
-              "nuRG":"5272424",
-              "nuCpf":"61615160396",
-              "dtEmissaoRg":"2010-10-10",
-              "nmOrgaoEmissorRg":"SSP",
-              "nmUfOrgaoEmissorRg":"MG",
-              "dsNaturalidade":"LAGOA SANTA",
-              "nmEnderecoResidencialTipo":1,
-              "nmEnderecoResidencialLogradouro":"RUA SANTA LUZIA",
-              "nmEnderecoResidencialNumero":"361",
-              "nmEnderecoResidencialComplemento":null,
-              "nmEnderecoResidencialBairro":"OVIDIO GUERRA",
-              "nmEnderecoResidencialCidade":"LAGOA SANTA",
-              "nmEnderecoResidencialUf":"MG",
-              "nuEnderecoResidencialCep":"33400000",
-              "nuDddTelefoneCelular":31993650728,
-              "nuDddTelefoneResidencial":1,
-              "vrRenda":"1220.00",
-              "nuCNH":"",
-              "tempoResidencia":"0",
-              "tipoLogradouro":"None",
-              "dsNacionalidade":"BRASILEIRA",
-              "vrPatrimonio":"10000.00",
-              "escolaridade":"1",
-              "empresa":{
-                 "empresa":"INSS",
-                 "profissao":"PROFISSAO NAO DEFINIDA",
-                 "dtAdmissao":"2023-03-15",
-                 "ramoAtividade":"SEM ATIVIDADE PROFISSIONAL",
-                 "tipoProfissao":"APOSENTADO PRIVADO",
-                 "ramoAtividadeOr":"SEM ATIVIDADE PROFISSIONAL",
-                 "tipoProfissaoOr":"APOSENTADO PRIVADO"
-              }
-           },
-            "representante": {
-                "nmCliente": "ANGELICA PINTO MAIA",
-                "dtNascimento": "1945-11-22",
-                "nmMae": "RAAIMUNDA NONATA SILVA",
-                "nmPai": "NAO CONSTA NO DOCUMENTO",
-                "nmSexo": "F",
-                "dsEstadoCivil": "OUTROS",
-                "nmEmail": "",
-                "nuCpf": "02806073254",
-                "dtEmissaoRg": "2018-09-19",
-                "nmOrgaoEmissorRg": "SSP",
-                "nmUfOrgaoEmissorRg": "AC",
-                "dsNaturalidade": "ACRELANDIA",
-                "nmEnderecoResidencialTipo": "1",
-                "nmEnderecoResidencialLogradouro": "RUA PROJETADA 41",
-                "nmEnderecoResidencialNumero": "41",
-                "nmEnderecoResidencialComplento": "None",
-                "nmEnderecoResidencialBairro": "JUREICO",
-                "nmEnderecoResidencialCidade": "ACRELANDIA",
-                "nmEnderecoResidencialUf": "MA",
-                "nuEnderecoResidencialCep": "65200000",
-                "nuDddTelefoneCelular": "098984645210",
-                "nuDddTelefoneResidencial": "1",
-                "vrRenda": "1212.0",
-                "tempoResidencia": "0",
-                "tipoLogradouro": "",
-                "nacionalidade": "BRASILEIRA",
-                "vrPatrimonio": "10000.0",
-                "escolaridade": "1",
-                "nuRG": "0207870320028"
-            },
-            "beneficio": {
-                "matricula": "7042811594",
-                "ufBeneficio": "AC",
-                "tipoBeneficio": "87",
-                "vrBeneficio": "1212.0",
-                "dtConcessaoBeneficio": "2019-01-02",
-                "dia_util_pagamento": "",
-                "dia_util_forma_pagamento": ""
-            },
-            "parcela": [
-                {
-                    "nuParcela": "1",
-                    "dtVencimento": "2022-12-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2022-12-07"
-                },
-                {
-                    "nuParcela": "2",
-                    "dtVencimento": "2023-01-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-01-07"
-                },
-                {
-                    "nuParcela": "3",
-                    "dtVencimento": "2023-02-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-02-07"
-                },
-                {
-                    "nuParcela": "4",
-                    "dtVencimento": "2023-03-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "5",
-                    "dtVencimento": "2023-04-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "6",
-                    "dtVencimento": "2023-05-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": true,
-                    "paga": true,
-                    "vrPago": "44.11",
-                    "dtPagamento": "2023-03-07"
-                },
-                {
-                    "nuParcela": "7",
-                    "dtVencimento": "2023-06-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "8",
-                    "dtVencimento": "2023-07-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "9",
-                    "dtVencimento": "2023-08-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "10",
-                    "dtVencimento": "2023-09-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "11",
-                    "dtVencimento": "2023-10-07",
-                    "vrParcela": "44.11",
-                    "recebido_facta": false,
-                    "paga": false,
-                    "vrPago": "",
-                    "dtPagamento": ""
-                },
-                {
-                    "nuParcela": "12",
-                    "dtVencimento": "2023-11-07",
                     "vrParcela": "44.11",
                     "recebido_facta": false,
                     "paga": false,

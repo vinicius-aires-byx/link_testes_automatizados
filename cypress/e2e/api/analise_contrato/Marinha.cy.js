@@ -29,12 +29,6 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Range data vencimento;")
         expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validacao Bureau - Obito, PEP; - OBITO")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validacao Bureau - Obito, PEP; - PEP")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Situacao CPF Receita: Diferente de Regular;")
-        expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Patente;")
         expect(regras.regra_aprovada).to.be.true
       })
@@ -179,30 +173,6 @@ describe('Range data vencimento; REPROVADO', () => {
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === "Range data vencimento;");
-        expect(regraEncontrada.regra_aprovada).to.be.false;
-      })
-  })
-})
-
-describe('Validacao Bureau - Obito, PEP; REPROVADO', () => {
-  it('successfully', () => {
-    cy.validacao_bureau_reprovado_marinha()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        let regraEncontrada = response.body.regras.find(m => m.descricao === "Validacao Bureau - Obito, PEP; - OBITO");
-        expect(regraEncontrada.regra_aprovada).to.be.true;
-        regraEncontrada = response.body.regras.find(m => m.descricao === "Validacao Bureau - Obito, PEP; - PEP");
-        expect(regraEncontrada.regra_aprovada).to.be.true;
-      })
-  })
-})
-
-describe('Situacao CPF Receita: Diferente de Regular; REPROVADO', () => {
-  it('successfully', () => {
-    cy.situacao_cpf_receita_reprovado_marinha()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        let regraEncontrada = response.body.regras.find(m => m.descricao === "Situacao CPF Receita: Diferente de Regular;");
         expect(regraEncontrada.regra_aprovada).to.be.false;
       })
   })

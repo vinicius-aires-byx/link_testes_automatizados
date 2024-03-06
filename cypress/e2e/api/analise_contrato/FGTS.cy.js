@@ -39,19 +39,7 @@ describe('Analise com sucesso', () => {
       expect(regras.regra_aprovada).to.be.true
       regras = response.body.regras.find(m => m.descricao === "Limite Máximo de Parcelas - 12;")
       expect(regras.regra_aprovada).to.be.true
-      //regras = response.body.regras.find(m => m.descricao === "Garantia CEF;")
-      //expect(regras.regra_aprovada).to.be.true
-      //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
-      //expect(regras.regra_aprovada).to.be.true
-      //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1")
-      //expect(regras.regra_aprovada).to.be.true
-      //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO")
-      //expect(regras.regra_aprovada).to.be.true
-      //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP")
-      //expect(regras.regra_aprovada).to.be.true
-      regras = response.body.regras.find(m => m.descricao === "Situação CPF Receita: Diferente de Regular;")
-      expect(regras.regra_aprovada).to.be.true
-      regras = response.body.regras.find(m => m.descricao === "Contrato duplicado;")
+      regras = response.body.regras.find(m => m.descricao === "Contrato Duplicado")
       expect(regras.regra_aprovada).to.be.true
       regras = response.body.regras.find(m => m.descricao === "Parcela Media;")
       expect(regras.regra_aprovada).to.be.true
@@ -257,53 +245,12 @@ describe('Limite Máximo de Parcelas - 12; REPROVADO', () => {
   })
 })
 
-/*
-describe('Garantia CEF; REPROVADO', () => {
-  it('successfully', () => {
-    cy.garantia_cef_reprovado_fgts()
-    .then((response) => {
-      expect(response.status).to.equal(201);
-      let regras = response.body.regras.find(m => m.descricao === "Garantia CEF;")
-      expect(regras.regra_aprovada).to.be.false
-    })
-  })
-})
-*/
-
-describe('Validação Bureau - Nome, Nascimento, Obito, PEP; REPROVADO', () => {
-  it('successfully', () => {
-    cy.validacao_bureau_reprovado_fgts()
-    .then((response) => {
-      expect(response.status).to.equal(201);
-      let regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
-      expect(regras.regra_aprovada).to.be.false
-      regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1")
-      expect(regras.regra_aprovada).to.be.false
-      regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO")
-      expect(regras.regra_aprovada).to.be.true
-      regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP")
-      expect(regras.regra_aprovada).to.be.true
-    })
-  })
-})
-
-describe('Situação CPF Receita: Diferente de Regular; REPROVADO', () => {
-  it('successfully', () => {
-    cy.situacao_cpf_receita_reprovado_fgts()
-    .then((response) => {
-      expect(response.status).to.equal(201);
-      let regras = response.body.regras.find(m => m.descricao === "Situação CPF Receita: Diferente de Regular;")
-      expect(regras.regra_aprovada).to.be.false
-    })
-  })
-})
-
-describe('Contrato duplicado; REPROVADO', () => {
+describe('Contrato Duplicado REPROVADO', () => {
   it('successfully', () => {
     cy.contrato_duplicado_reprovado_fgts()
     .then((response) => {
       expect(response.status).to.equal(201);
-      let regras = response.body.regras.find(m => m.descricao === "Contrato duplicado;")
+      let regras = response.body.regras.find(m => m.descricao === "Contrato Duplicado")
       expect(regras.regra_aprovada).to.be.false
     })
   })

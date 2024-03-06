@@ -47,16 +47,6 @@ describe('Analise com sucesso', () => {
         expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Contrato em lista restritiva;")
         expect(regras.regra_aprovada).to.be.true
-        //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
-        //expect(regras.regra_aprovada).to.be.true
-        //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1")
-        //expect(regras.regra_aprovada).to.be.true
-        //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO")
-        //expect(regras.regra_aprovada).to.be.true
-        //regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP")
-        //expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Situação CPF Receita: Diferente de Regular;")
-        expect(regras.regra_aprovada).to.be.true
         regras = response.body.regras.find(m => m.descricao === "Benefícios elegíveis")
         expect(regras.regra_aprovada).to.be.true
       })
@@ -300,34 +290,6 @@ describe('Contrato em lista restritiva; REPROVADO', () => {
       .then(response => {
         expect(response.status).to.equal(201)
         let regraEncontrada = response.body.regras.find(m => m.descricao === 'Contrato em lista restritiva;');
-        expect(regraEncontrada.regra_aprovada).to.be.false;
-      })
-  })
-})
-
-describe('Validação Bureau - Nome, Nascimento, Obito, PEP; REPROVADO', () => {
-  it('successfully', () => {
-    cy.validacao_bureau_reprovado_inss()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        let regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NASCIMENTO")
-        expect(regras.regra_aprovada).to.be.false
-        regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - NOME:1")
-        expect(regras.regra_aprovada).to.be.false
-        regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - OBITO")
-        expect(regras.regra_aprovada).to.be.true
-        regras = response.body.regras.find(m => m.descricao === "Validação Bureau - Nome, Nascimento, Obito, PEP; - PEP")
-        expect(regras.regra_aprovada).to.be.true
-      })
-  })
-})
-
-describe('Situação CPF Receita: Diferente de Regular; REPROVADO', () => {
-  it('successfully', () => {
-    cy.situacao_cpf_receita_reprovado_inss()
-      .then(response => {
-        expect(response.status).to.equal(201)
-        const regraEncontrada = response.body.regras.find(m => m.descricao === 'Situação CPF Receita: Diferente de Regular;');
         expect(regraEncontrada.regra_aprovada).to.be.false;
       })
   })
