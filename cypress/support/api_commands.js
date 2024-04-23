@@ -16109,6 +16109,7 @@ Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_inss_rep
     })
 })
 
+
 Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_inss_representante_legal', project => {
     cy.request({
       method: 'POST',
