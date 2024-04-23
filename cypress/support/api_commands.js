@@ -9,7 +9,7 @@ Cypress.Commands.add('analise_com_sucesso_fgts', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": "35194050001",
+                "nuContratoFacta": "283918912897231312",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -37,7 +37,7 @@ Cypress.Commands.add('analise_com_sucesso_fgts', project => {
                 "recusado": "false",
                 "docsValidados": "false",
                 "tipoProduto": 1,
-                "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+                "tokenAmbiente": "efcf38fa1f60604e66da23c15419b8df4a291079",
                 "status": 1
             },
             "cliente": {
@@ -5387,7 +5387,7 @@ Cypress.Commands.add('analise_com_sucesso_inss', project => {
             "recusado": "false",
             "docsValidados": "false",
             "tipoProduto": 6,
-            "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+            "tokenAmbiente": "efcf38fa1f60604e66da23c15419b8df4a291079",
             "status": 1
         },
         "cliente": {
@@ -9478,7 +9478,7 @@ Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_inss', project => 
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
-            "dtContrato": "2024-04-12",
+            "dtContrato": "2025-04-12",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
             "qtParcelasAberto": "6",
@@ -11533,7 +11533,7 @@ Cypress.Commands.add('analise_com_sucesso_inss_representante_legal', project => 
             "recusado": "false",
             "docsValidados": "false",
             "tipoProduto": 2,
-            "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+            "tokenAmbiente": "efcf38fa1f60604e66da23c15419b8df4a291079",
             "status": 1
         },
         "cliente":{
@@ -16120,7 +16120,7 @@ Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_inss_representante
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
-            "dtContrato": "2024-04-12",
+            "dtContrato": "2025-04-12",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
             "qtParcelasAberto": "6",
@@ -18168,7 +18168,7 @@ Cypress.Commands.add('analise_com_sucesso_cartao_beneficio_representante_legal',
             "recusado": "false",
             "docsValidados": "false",
             "tipoProduto": 3,
-            "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+            "tokenAmbiente": "efcf38fa1f60604e66da23c15419b8df4a291079",
             "status": 1
         },
         "cliente":{
@@ -21466,7 +21466,7 @@ Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_cartao_beneficio_r
             "cdContratoTipo": "1",
             "nuCnpjCorrespondente": "01360251000140",
             "dtDigitacao": "2022-10-04",
-            "dtContrato": "2024-04-12",
+            "dtContrato": "2025-04-12",
             "dtPrimeiroVencimento": "2022-12-07",
             "nuCpfAgenteValidador": "01217961160",
             "qtParcelasAberto": "6",
@@ -23540,7 +23540,7 @@ Cypress.Commands.add('analise_com_sucesso_siape', project => {
                 "recusado": "false",
                 "docsValidados": "false",
                 "tipoProduto": 8,
-                "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+                "tokenAmbiente": "efcf38fa1f60604e66da23c15419b8df4a291079",
                 "status": 1
             },
             "cliente": {
@@ -27849,7 +27849,7 @@ Cypress.Commands.add('analise_com_sucesso_exercito', project => {
                 "recusado": "false",
                 "docsValidados": "false",
                 "tipoProduto": 9,
-                "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+                "tokenAmbiente": "efcf38fa1f60604e66da23c15419b8df4a291079",
                 "status": 1
             },
             "cliente": {
@@ -31902,7 +31902,7 @@ Cypress.Commands.add('analise_com_sucesso_marinha', project => {
                 "recusado": "false",
                 "docsValidados": "false",
                 "tipoProduto": 10,
-                "tokenAmbiente": "1a4342200d68929b98502a7f74049d59d81bca7b",
+                "tokenAmbiente": "efcf38fa1f60604e66da23c15419b8df4a291079",
                 "status": 1
             },
             "cliente": {
