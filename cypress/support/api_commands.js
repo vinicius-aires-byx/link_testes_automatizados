@@ -9,7 +9,7 @@ Cypress.Commands.add('analise_com_sucesso_fgts', project => {
         body: {
             "contrato": {
                 "nuLote": "42",
-                "nuContratoFacta": "283918912897231312",
+                "nuContratoFacta": "798321879321",
                 "cdContratoTipo": "1",
                 "nuCnpjCorrespondente": "01360251000140",
                 "dtDigitacao": "2022-10-04",
@@ -16108,7 +16108,6 @@ Cypress.Commands.add('limite_maximo_idade_representante_legal_reprovado_inss_rep
     }
     })
 })
-
 
 Cypress.Commands.add('ccb_imitida_a_menos_de_8_dias_reprovado_inss_representante_legal', project => {
     cy.request({
