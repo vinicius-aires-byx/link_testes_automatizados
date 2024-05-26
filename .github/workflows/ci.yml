@@ -1,23 +1,21 @@
-name: Cessão tests 🧪
-on:  
-  push:
-  schedule: ## Schedule the job to run at 12.am daily.
-    - cron: '0 12 * * 1-5'
+name: "sonar_cloud_scan_github_actions"
+on:
+  workflow_dispatch:
+
 jobs:
-  cypress-run:
-    runs-on: ubuntu-20.04
+  DemoSonarCloudSCan:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
+      - uses: actions/checkout@v3
         with:
-          spec: |
-            cypress/e2e/api/analise_contrato/FGTS.cy.js
-            cypress/e2e/api/analise_contrato/INSS.cy.js
-            cypress/e2e/api/analise_contrato/CartaoBeneficio_RepresentanteLegal.cy.js
-            cypress/e2e/api/analise_contrato/INSS_RepresentanteLegal.cy.js
-            cypress/e2e/api/analise_contrato/SIAPE.cy.js
-            cypress/e2e/api/analise_contrato/Exercito.cy.js
-            cypress/e2e/api/analise_contrato/Marinha.cy.js
+            fetch-depth: 0
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+            GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+              -Dsonar.organization=vinicius-airess
+              -Dsonar.projectKey=link_testes_automatizados
+              -Dsonar.python.coverage.reportPaths=coverage.xml
