@@ -2,12 +2,13 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://hub-staging.byx.capital/',
+    baseUrl: 'https://dev-hub.byx.capital/',
     env: {
       hideCredentials: true,
       requestMode: true,
     },
   },
-  fixturesFolder: false,
+  fixturesFolder: 'cypress/fixtures',
   video: false,
+  defaultCommandTimeout: 10000
 })
